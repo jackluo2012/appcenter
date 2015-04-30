@@ -1,0 +1,66 @@
+2015/04/30 16:53:51 [user_app.go:28] [D] ParseUserAppSearchForm: &{100000 1 50 10000000 ce:56:8f:5d:0e:ee} 
+2015/04/30 16:53:51 [user_app.go:61] [D] map[10000000:[123 34 97 112 112 105 100 34 58 49 48 48 48 48 48 48 48 44 34 117 115 101 114 95 105 100 34 58 49 48 48 48 48 48 44 34 117 100 105 100 34 58 34 99 101 58 53 54 58 56 102 58 53 100 58 48 101 58 101 101 34 44 34 118 101 114 115 105 111 110 34 58 34 49 46 48 34 44 34 99 114 101 97 116 101 95 100 97 116 101 34 58 34 50 48 49 53 45 48 52 45 51 48 84 49 49 58 50 57 58 50 52 46 56 54 55 43 48 56 58 48 48 34 125]] 
+2015/04/30 16:53:51 [user_app.go:56] [D] - - - 0 100000 
+2015/04/30 16:53:51 [router.go:845] [D] | POST       | /v1/user/app_list                        | 2.386523ms       | match      | /v1/user/app_list                        | 
+2015/04/30 17:01:58 [app.go:103] [I] http server Running on :8080
+2015/04/30 17:02:03 [app.go:103] [I] http server Running on :8080
+2015/04/30 17:02:11 [router.go:845] [D] | GET        | /docs                                    | 1.563573ms       | match      | /docs                                    | 
+2015/04/30 17:02:11 [router.go:845] [D] | GET        | /docs                                    | 2.607927ms       | match      | /docs                                    | 
+2015/04/30 17:02:11 [router.go:845] [D] | GET        | /docs/user                               | 1.578019ms       | match      | /docs/*                                  | 
+2015/04/30 17:02:11 [router.go:845] [D] | GET        | /docs/user                               | 1.445681ms       | match      | /docs/*                                  | 
+2015/04/30 17:02:26 [user_app.go:28] [D] ParseUserAppSearchForm: &{100000 1 50 10000000 ce:56:8f:5d:0e:ee} 
+2015/04/30 17:02:26 [user_app.go:56] [D] - - - 0 100000 
+2015/04/30 17:02:26 [router.go:845] [D] | POST       | /v1/user/app_list                        | 1.642888ms       | match      | /v1/user/app_list                        | 
+2015/04/30 17:03:18 [app.go:103] [I] http server Running on :8080
+2015/04/30 17:06:10 [user_app.go:28] [D] ParseUserAppSearchForm: &{0 1 50 10000000 ce:56:8f:5d:0e:ee} 
+2015/04/30 17:06:10 [user_app.go:39] [D] ValidUserAppSearchForm errors: 
+2015/04/30 17:06:10 [user_app.go:41] [D] UserId.Required Can not be empty 
+2015/04/30 17:06:10 [router.go:845] [D] | POST       | /v1/user/app_list                        | 4.80926ms        | match      | /v1/user/app_list                        | 
+2015/04/30 17:07:02 [app.go:103] [I] http server Running on :8080
+2015/04/30 17:07:05 [app.go:103] [I] http server Running on :8080
+2015/04/30 17:07:18 [user_app.go:28] [D] ParseUserAppSearchForm: &{0 1 50 10000000 ce:56:8f:5d:0e:ee} 
+2015/04/30 17:07:18 [user_app.go:39] [D] ValidUserAppSearchForm errors: 
+2015/04/30 17:07:18 [user_app.go:41] [D] UserId.Required Can not be empty 
+2015/04/30 17:07:18 [router.go:845] [D] | POST       | /v1/user/app_list                        | 1.678502ms       | match      | /v1/user/app_list                        | 
+2015/04/30 17:08:50 [app.go:103] [I] http server Running on :8080
+2015/04/30 17:09:33 [app.go:103] [I] http server Running on :8080
+2015/04/30 17:09:37 [app.go:103] [I] http server Running on :8080
+2015/04/30 17:09:38 [app.go:103] [I] http server Running on :8080
+2015/04/30 17:09:41 [router.go:845] [D] | GET        | /docs                                    | 2.638125ms       | match      | /docs                                    | 
+2015/04/30 17:09:41 [router.go:845] [D] | GET        | /docs                                    | 1.222171ms       | match      | /docs                                    | 
+2015/04/30 17:09:41 [router.go:845] [D] | GET        | /docs/user                               | 1.839151ms       | match      | /docs/*                                  | 
+2015/04/30 17:09:41 [router.go:845] [D] | GET        | /docs/user                               | 1.170236ms       | match      | /docs/*                                  | 
+2015/04/30 17:10:13 [app.go:103] [I] http server Running on :8080
+2015/04/30 17:10:19 [router.go:845] [D] | GET        | /docs                                    | 1.744652ms       | match      | /docs                                    | 
+2015/04/30 17:10:19 [router.go:845] [D] | GET        | /docs                                    | 1.079339ms       | match      | /docs                                    | 
+2015/04/30 17:10:19 [router.go:845] [D] | GET        | /docs/user                               | 1.533564ms       | match      | /docs/*                                  | 
+2015/04/30 17:10:19 [router.go:845] [D] | GET        | /docs/user                               | 959.574µs        | match      | /docs/*                                  | 
+2015/04/30 17:11:05 [app.go:103] [I] http server Running on :8080
+2015/04/30 17:11:20 [app.go:103] [I] http server Running on :8080
+2015/04/30 17:11:58 [router.go:845] [D] | GET        | /docs                                    | 1.766594ms       | match      | /docs                                    | 
+2015/04/30 17:11:58 [router.go:845] [D] | GET        | /docs                                    | 2.233585ms       | match      | /docs                                    | 
+2015/04/30 17:11:58 [router.go:845] [D] | GET        | /docs/user                               | 1.601125ms       | match      | /docs/*                                  | 
+2015/04/30 17:11:58 [router.go:845] [D] | GET        | /docs/user                               | 1.776618ms       | match      | /docs/*                                  | 
+2015/04/30 17:13:48 [router.go:845] [D] | GET        | /docs                                    | 1.079568ms       | match      | /docs                                    | 
+2015/04/30 17:13:48 [router.go:845] [D] | GET        | /docs                                    | 2.005957ms       | match      | /docs                                    | 
+2015/04/30 17:13:48 [router.go:845] [D] | GET        | /docs/user                               | 1.263192ms       | match      | /docs/*                                  | 
+2015/04/30 17:13:48 [router.go:845] [D] | GET        | /docs/user                               | 3.938169ms       | match      | /docs/*                                  | 
+2015/04/30 17:13:52 [router.go:845] [D] | GET        | /docs                                    | 1.697982ms       | match      | /docs                                    | 
+2015/04/30 17:13:52 [router.go:845] [D] | GET        | /docs                                    | 11.261775ms      | match      | /docs                                    | 
+2015/04/30 17:13:52 [router.go:845] [D] | GET        | /docs/user                               | 6.320169ms       | match      | /docs/*                                  | 
+2015/04/30 17:13:52 [router.go:845] [D] | GET        | /docs/user                               | 889.639µs        | match      | /docs/*                                  | 
+2015/04/30 17:14:21 [app.go:103] [I] http server Running on :8080
+2015/04/30 17:14:22 [app.go:103] [I] http server Running on :8080
+2015/04/30 17:14:28 [app.go:103] [I] http server Running on :8080
+2015/04/30 17:14:30 [router.go:845] [D] | GET        | /docs                                    | 1.589012ms       | match      | /docs                                    | 
+2015/04/30 17:14:30 [router.go:845] [D] | GET        | /docs                                    | 1.170026ms       | match      | /docs                                    | 
+2015/04/30 17:14:30 [router.go:845] [D] | GET        | /docs/user                               | 2.448862ms       | match      | /docs/*                                  | 
+2015/04/30 17:14:31 [router.go:845] [D] | GET        | /docs/user                               | 988.168µs        | match      | /docs/*                                  | 
+2015/04/30 17:16:25 [router.go:845] [D] | GET        | /docs                                    | 897.086µs        | match      | /docs                                    | 
+2015/04/30 17:16:25 [router.go:845] [D] | GET        | /docs                                    | 2.889371ms       | match      | /docs                                    | 
+2015/04/30 17:16:25 [router.go:845] [D] | GET        | /docs/user                               | 7.361185ms       | match      | /docs/*                                  | 
+2015/04/30 17:16:25 [router.go:845] [D] | GET        | /docs/user                               | 12.668724ms      | match      | /docs/*                                  | 
+2015/04/30 17:16:26 [router.go:845] [D] | GET        | /docs                                    | 2.604798ms       | match      | /docs                                    | 
+2015/04/30 17:16:26 [router.go:845] [D] | GET        | /docs                                    | 7.582553ms       | match      | /docs                                    | 
+2015/04/30 17:16:26 [router.go:845] [D] | GET        | /docs/user                               | 5.831194ms       | match      | /docs/*                                  | 
+2015/04/30 17:16:26 [router.go:845] [D] | GET        | /docs/user                               | 2.122971ms       | match      | /docs/*                                  | 
