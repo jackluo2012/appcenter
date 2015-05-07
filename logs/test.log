@@ -64,3 +64,41 @@
 2015/04/30 17:16:26 [router.go:845] [D] | GET        | /docs                                    | 7.582553ms       | match      | /docs                                    | 
 2015/04/30 17:16:26 [router.go:845] [D] | GET        | /docs/user                               | 5.831194ms       | match      | /docs/*                                  | 
 2015/04/30 17:16:26 [router.go:845] [D] | GET        | /docs/user                               | 2.122971ms       | match      | /docs/*                                  | 
+2015/05/06 16:59:53 [app.go:103] [I] http server Running on :8080
+2015/05/06 16:59:54 [app.go:103] [I] http server Running on :8080
+2015/05/06 17:00:02 [router.go:845] [D] | GET        | /                                        | 2.42028ms        | match      | /                                        | 
+2015/05/06 17:00:04 [router.go:845] [D] | GET        | /                                        | 1.153232ms       | match      | /                                        | 
+2015/05/06 17:01:37 [router.go:845] [D] | GET        | /                                        | 823.738µs        | match      | /                                        | 
+2015/05/06 17:02:30 [app.go:103] [I] http server Running on :8080
+2015/05/06 17:02:35 [router.go:845] [D] | GET        | /                                        | 1.731063ms       | match      | /                                        | 
+2015/05/06 17:02:35 [router.go:845] [D] | GET        | /                                        | 909.283µs        | match      | /                                        | 
+2015/05/06 17:02:35 [router.go:845] [D] | GET        | /                                        | 898.402µs        | match      | /                                        | 
+2015/05/06 17:02:36 [router.go:845] [D] | GET        | /                                        | 958.676µs        | match      | /                                        | 
+2015/05/06 17:02:36 [router.go:845] [D] | GET        | /                                        | 910.275µs        | match      | /                                        | 
+2015/05/06 17:03:07 [app.go:103] [I] http server Running on :8080
+2015/05/06 17:03:08 [app.go:103] [I] http server Running on :8080
+2015/05/06 17:07:39 [app.go:103] [I] http server Running on :8080
+2015/05/06 17:07:40 [app.go:103] [I] http server Running on :8080
+2015/05/06 17:07:48 [router.go:845] [D] | GET        | /                                        | 24.36925ms       | match      | /                                        | 
+2015/05/06 17:07:50 [router.go:845] [D] | GET        | /                                        | 22.510881ms      | match      | /                                        | 
+2015/05/06 17:09:11 [app.go:103] [I] http server Running on :8080
+2015/05/06 17:09:12 [app.go:103] [I] http server Running on :8080
+2015/05/06 17:11:36 [app.go:103] [I] http server Running on :8080
+2015/05/06 17:11:37 [app.go:103] [I] http server Running on :8080
+2015/05/06 17:15:36 [app.go:103] [I] http server Running on :8080
+2015/05/06 18:03:54 [app.go:103] [I] http server Running on :8080
+2015/05/06 18:03:55 [app.go:103] [I] http server Running on :8080
+2015/05/06 18:03:59 [app.go:103] [I] http server Running on :8080
+2015/05/06 18:04:00 [app.go:103] [I] http server Running on :8080
+2015/05/06 18:28:47 [app.go:103] [I] http server Running on :8080
+2015/05/06 18:28:49 [app.go:103] [I] http server Running on :8080
+2015/05/06 18:29:40 [app.go:103] [I] http server Running on :8080
+2015/05/06 18:31:37 [app.go:103] [I] http server Running on :8080
+2015/05/06 18:31:40 [app.go:103] [I] http server Running on :8080
+2015/05/06 18:31:42 [index.go:22] [D] 0 Error 1146: Table 'beego.user' doesn't exist 
+2015/05/06 18:31:42 [router.go:845] [D] | GET        | /                                        | 26.356372ms      | match      | /                                        | 
+2015/05/06 18:32:56 [index.go:22] [D] 0 Error 1146: Table 'beego.user' doesn't exist 
+2015/05/06 18:32:56 [router.go:845] [D] | GET        | /                                        | 23.092011ms      | match      | /                                        | 
+2015/05/06 18:33:10 [app.go:103] [I] http server Running on :8080
+2015/05/06 18:33:13 [index.go:22] [D] 4 <nil> 
+2015/05/06 18:33:13 [router.go:845] [D] | GET        | /                                        | 25.425891ms      | match      | /                                        | 

@@ -94,7 +94,7 @@ func (u *UserAppController) AppInsert() {
 	}
 	//检查是否添加过了
 	user_app_info := &models.UserAppInfo{}
-	code, _ := user_app_info.FindByAttribute(&user_app_form, 2)
+	code, _ := user_app_info.FindByAttribute(&user_app_form, 1)
 
 	if code != 404 {
 		beego.Debug("UserExistApp:", user_app_info)
@@ -154,7 +154,7 @@ func (u *UserAppController) AppUpdate() {
 	user_app_info := &models.UserAppInfo{}
 	code, _ := user_app_info.FindByAttribute(&user_app_form, 1)
 	if code == 404 {
-		beego.Debug("这里有问题:", user_app_info)
+		//beego.Debug("这里有问题:", user_app_info)
 		u.Data["json"] = app_error.ErrUserAppInfoNoExist
 		u.ServeJson()
 		return
