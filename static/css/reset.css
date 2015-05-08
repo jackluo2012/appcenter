@@ -1,0 +1,50 @@
+html, body, div, iframe, h1, h2, h3,
+h4, h5, h6, p,  dl, dt, dd, ol, ul, li,
+form, table, tbody,thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei" !important;
+}
+.hoverA:active{
+    background-color: #92cef7 ;
+}
+.hoverA{
+    cursor: pointer;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+}
+a img, iframe {
+    border: none;
+}
+a{text-decoration: none;color: #7c7c7c}
+ol, ul {
+    list-style: none;
+}
+input, textarea, select, button {
+    font-size: 100%;
+    font-family: inherit;
+}
+select {
+    margin: inherit;
+}
+.r{float: right}
+.l{float: left}
+/* Fixes incorrect placement of numbers in ol's in IE6/7 */
+ol { margin-left:2em; }
+/* == clearfix == */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {display: inline-block;}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}

@@ -1,5 +1,5 @@
 package app_ckey
 
 const (
-	UserAppList = "u:app"
+	USERAPPLIST = "u:app"
 )

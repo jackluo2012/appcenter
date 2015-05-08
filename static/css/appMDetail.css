@@ -1,0 +1,493 @@
+body {
+  -webkit-user-select: none;
+  -webkit-text-size-adjust: none;
+  font: normal 100% Arial, Microsoft Yahei, "微软雅黑";
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: none;
+  height: 100%;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: #333
+}
+ul {
+  list-style: none
+}
+.centerize {
+  margin: 0 auto;
+  text-align: left;
+  max-width: 976px
+}
+img {
+  border: 0 none
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+
+/* 搜索和快捷栏目 */
+.main {
+  padding-bottom: 55px;
+}
+.main-oper {
+  overflow: hidden;
+  width: 100%;
+  background-color: #b3bfcd;
+  height: 60px
+}
+.main_content {
+  max-width: 1100px;
+  margin: 0 auto;
+  line-height: 60px;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "Microsoft Yahei";
+}
+.main_content .logo {
+  width: 80px;
+  height: 75px;
+  float: left;
+  margin-left: 20px;
+}
+.logo1 {
+  background: url("../img/big_arrow_down.png") no-repeat;
+  background-size: 22px 28px;
+  background-position: 5px 16px;
+  padding-left: -20px
+}
+}
+.logo1:active {
+background: url("../img/big_arrow_down1.png") no-repeat;
+  background-size: 24px 30px;
+  background-position: 5px 16px;
+}
+}
+.logo2 {
+background-image: url("../img/app_down.png");
+background-size: 50px 50px;
+margin-left: -10px;
+}
+.dropdown-menu {
+position: absolute;
+top: 100%;
+left: 0;
+z-index: 1000;
+display: none;
+float: left;
+min-width: 160px;
+padding: 5px 0;
+margin: 2px 0 0;
+list-style: none;
+font-size: 14px;
+background-color: #333333;
+opacity: 0.8;
+background-clip: padding-box;
+}
+.dropdown-menu table tr th {
+text-align: left;
+width: 45px;
+color: #FFF;
+}
+.dropdown-menu table tr td {
+text-align: center;
+width: 45px;
+}
+.category a {
+color: #FFFFFF;
+background: transparent;
+}
+
+/* 特殊字体 */
+span .red {
+color: #CC3300;
+}
+.fontColor {
+color: #414040 !important;
+margin-left: -25px
+}
+
+/* 按钮类 */
+.button {
+border-radius: .3em;
+position: relative;
+top: 28px;
+margin-left: 28px;
+}
+.button-blue:hover {
+background: #0088FF;
+cursor: pointer;
+}
+.button-blue:active {
+background: #0077FF;
+}
+.button-grey {
+background: #1fb2b7;
+margin-left: 5px !important;
+}
+.button-grey:hover {
+opacity: .8;
+cursor: pointer;
+}
+.button-more {
+background: #EEE;
+}
+.button-more:hover {
+background: #DDD;
+cursor: pointer;
+}
+.button-more:active {
+background: #CCC;
+}
+.button-azury {
+background: #00DDFF;
+}
+.button-azury:hover {
+background: #00CCFF;
+cursor: pointer;
+}
+.button-azury:active {
+background: #00CCDD;
+}
+
+/* detail页面主体部分 */
+.Breadcrumb {
+height: 36px;
+}
+.Breadcrumb h1 {
+float: left;
+border-bottom: 3px solid black;
+}
+.detail-main {
+margin-bottom: 18px;
+width: 97%;
+margin: 0 auto
+}
+.detail-main a {
+color: #0099FF;
+}
+.app-part1, .app-part2, .app-part3 {
+margin: 20px 0%;
+margin-top: 0px;
+box-sizing: border-box;
+width: 100%
+}
+.app-l {
+float: left;
+margin: 10px 0%;
+width: 72px;
+height: 72px;
+margin-left: 3%;
+box-sizing: border-box;
+}
+.app-m {
+float: left;
+margin: 10px 0%;
+margin-left: 5%;
+width: calc(92% - 72px);
+box-sizing: border-box;
+}
+.part2-title {
+border-bottom: 2px solid #CCC;
+}
+.app-part2 h2 {
+width: 82px;
+border-bottom: 3px solid black;
+}
+.part2-description {
+white-space: normal;
+padding: 10px;
+}
+.app-part3 h2 {
+width: 41px;
+border-bottom: 3px solid black;
+}
+.app-comment {
+padding: 10px;
+}
+.app-m>div {
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+/* 应用详情部分 */
+.app-img img {
+height: 72px;
+width: 72px;
+margin-top:20px;
+}
+.app-name b {
+font-size: 16px;
+padding-right: 40px;
+}
+.app-m-line1 {
+margin-bottom: 10px;
+margin-top:14px;
+}
+.app-qrcode img {
+border: #000 solid 1px
+}
+.fontSize {
+font-size: 16px;
+padding-left: 20px;
+font-weight: 700;
+font-family: "Microsoft Yahei";
+position: relative;
+top: 10px;
+}
+.share {
+width: 40px;
+height: 40px;
+float: left;
+margin-top: 16px;
+background-image: url("../img/share_app.png")
+}
+.app-version {
+padding-left: 0px !important;
+}
+
+/* 图片展示区域 */
+.app-carousel {
+width: 100%;
+overflow: hidden;
+padding: 0px;
+margin: 0px;
+text-align: center;
+vertical-align: top;
+margin-top: 10px;
+}
+.switch-right, .switch-left {
+height: 393px;
+width: auto;
+}
+.switch-left img {
+margin-top: 170px;
+cursor: pointer;
+float: left
+}
+.switch-right img {
+margin-top: 170px;
+cursor: pointer;
+float: right;
+}
+.switch-right, .switch-left, .screen-zone {
+display: inline-block;
+text-align: left;
+}
+.screen-zone {
+position: relative;
+width: calc(100% - 100px);
+height: 393px;
+overflow: hidden;
+}
+.screen-array {
+height: 464px;
+float: left;
+display: block;
+}
+.screenImg {
+position: absolute;
+float: left;
+overflow: hidden;
+height: 393px;
+}
+.margi {
+margin: 10px 0%;
+width: 100%;
+}
+.app-m-line2 {
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+.app-m-line3 a {
+margin-top: 20px;
+width: 145px;
+}
+
+/* 评论区和回复评论区 */
+.user-icon img {
+width: 72px;
+height: 72px;
+}
+.comment-submit {
+width: 100%;
+overflow: hidden;
+margin: 10px 0;
+}
+.comment-submit textarea {
+float: left;
+height: 70px;
+width: 88%;
+margin: 0;
+padding: 0;
+}
+.comment-submit span {
+color: #000;
+font-size: 20px;
+float: left;
+height: 72px;
+width: 11%;
+margin: 0;
+padding: 0;
+border: 0;
+border: 0 solid #1fb2b7;
+line-height: 70px;
+text-align: center;
+cursor: pointer
+}
+.comment {
+height: 100px;
+border-bottom: 1px solid #cdcdcd;
+}
+.comment-submit {
+margin-top: 20px;
+}
+.commentL {
+float: left;
+width: 78px;
+height: 78px;
+margin: 0 2%;
+margin-top: 10px;
+}
+.commentL img {
+width: 100%;
+height: auto;
+}
+.commentR {
+float: left;
+background-color: yellow;
+width: 87%;
+height: 78px;
+font-family: "Microsoft Yahei";
+}
+.time {
+position: relative;
+top: 8px;
+color: #adadad;
+}
+.nameCor {
+color: #0963c5;
+font-size: 20px;
+padding-right: 10px;
+}
+.screen-array img {
+width: 99%;
+margin-right: 1%;
+height: 100%;
+}
+.downloadUrl {
+color: white !important;
+display: block;
+font-size: 18px;
+height: 43px;
+background-color: #1fb2b7;
+text-align: center;
+top: 19px;
+line-height: 43px;
+text-decoration: none;
+}
+  .appMCenter_pop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:100 ;
+      background-color: rgba(0,0,0,0.1);
+   }
+.appMCenter_popCont{
+  display: none;
+  width:50%;
+  height: 100px;
+  position: fixed;
+  z-index:999;
+  top: 48%;
+}
+.appMCenter_popConttitile{
+  height: 100px;
+  width: 40%;
+  background-color: rgba(0,0,0,0.6);
+  line-height: 100px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2em; 
+  margin-left:70%
+}
+.appMCenter_popContBt{
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#a4a4a4), to(#808080)); 
+  background: -moz-linear-gradient(top, #a4a4a4, #808080) ;
+  background: -o-gradient(linear, 0% 0%, 0% 100%, from(#a4a4a4), to(#808080)); 
+  background: -ms-gradient(linear, 0% 0%, 0% 100%, from(#a4a4a4), to(#808080)); 
+  background: gradient(linear, 0% 0%, 0% 100%, from(#a4a4a4), to(#808080)); 
+}
+.appMCenter_popContBt button{
+  width: 45%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #d9d9d9;
+  margin-top: 5px;
+  outline: none !important;
+  outline:medium;
+  border: none;
+  font: normal 100% Arial,Microsoft Yahei,"Microsoft Yahei";
+}
+.app-m-line3 a:hover{ background-color:#4691f7; }
+.app-m-line3 a:active{ background-color:#4691f7; }
+.app-m-line3 a:visited { background-color:#c2c2c2; color:#e2e2e2;cursor:text}
+.app-m-line3 a{ text-decoration: none; color: white; }
+@media screen and (min-width:320px) and (max-width:480px) {
+.downloadUrl {
+  width: 56px;
+}
+.part2-description, .app-m-line2 {
+  font-size: 14px;
+}
+.main_content {
+  font-size: 22px;
+}
+.appMCenter_popConttitile{
+   width: 100%;
+   margin-left:50%;
+   margin-top: 17%;
+  }
+}
+@media screen and (min-width:480px) and (max-width:760px) {
+  .appMCenter_popConttitile{
+   width: 100%;
+   margin-left:40%
+  }
+
+}
+@media screen and (max-width:320px) and (min-width:240px) {
+.part2-description, .app-m-line2 {
+  font-size: 14px;
+}
+.main_content {
+  font-size: 20px;
+}
+}
+@media screen and (max-width:240px) {
+.part2-description, .app-m-line2 {
+  font-size: 14px;
+}
+.main_content {
+  font-size: 20px;
+}
+}
+
+/* kitty-2014-09-28 */
+#owl-demo .item img {
+display: block;
+width: 100%;
+height: 100%;
+}

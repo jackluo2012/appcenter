@@ -12,12 +12,6 @@ func Conn() redis.Conn {
 	return pool.Get()
 }
 
-/*
-func Close() {
-	pool.Close()
-}
-*/
-
 func newPool(server, password string) *redis.Pool {
 	return &redis.Pool{
 		MaxIdle:     3,
