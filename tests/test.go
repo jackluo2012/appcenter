@@ -5,11 +5,33 @@ import (
 		. "appcenter/common/app_ckey"
 		"appcenter/common/app_error"
 	*/"fmt"
+	"github.com/jackluo2012/Redis"
 	"path/filepath"
 	//"io/ioutil"
 )
 
+func connect() Redis.RedisType {
+	red := Redis.RedisType{Host: "127.0.0.1", Port: 6379, Password: "", DB: 10}
+	red.Connect()
+	return red
+}
+
 func main() {
+	MyRedis := connect()
+	defer MyRedis.RedisConn.Close()
+	//	sadd(MyRedis)
+	//	srem(MyRedis)
+	err := MyRedis.HSet("u:1212", "hs", "asdfasdf")
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("HSET COMPLETE")
+	row, err := MyRedis.HGet("u:1212", "hs")
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("HGET COMPLETE")
+	fmt.Printf("(%T) : row = %s\n", row, row)
 	//var a interface{}
 	//fmt.Println(app_error.ErrInputData)
 

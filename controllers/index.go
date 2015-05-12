@@ -13,30 +13,18 @@ type IndexController struct {
 func (c *IndexController) Get() {
 	beego.AutoRender = true
 
-	/*
-		o := orm.NewOrm()
-		o.Using("mysql")
-		var lists []orm.ParamsList
-		num, err := o.Raw("SELECT * FROM appUpload ").ValuesList(&lists)
+	uid := "100001"                    //c.GetString("uid")   //字符串
+	udid := "fe80::713d:36ec:e1ed:f4b" //c.GetString("udid") //用户的帐号
+	secretkey := c.GetString("secretkey")
+	app_func.CheckSecurity(uid, udid)
 
-		beego.Debug(num, err)
-	*/
-	//乱写一通了
+	beego.Debug(udid)
+	beego.Debug(app_func.CheckSecurity(uid, secretkey))
+
 	var Apps []*app_upload.AppUpload
-	app_upload.AppLists().Filter("applisted", "1").Filter("public", "1").All(&Apps)
+	Apps = app_upload.SearchAppLists(1, uid, udid, 889)
 
-	for _, app := range Apps {
-		app.IconUrl = app_func.GetUploadPath("icon", app.Appkey)
-		app.Category = app_func.CateTran(app.Category)
-		app.DownLoadUrl = app_func.GetAppDownLoadUrl(app.Appid)
-		zip_url := app_func.GetUploadPath("zip", app.Appkey)
-		beego.Debug(zip_url)
-		app.Size = app_func.GetFileSize(zip_url)
-		app.Screens = app_func.GetUploadScreensPath(app.Appkey)
-
-	}
-
-	beego.Debug(Apps)
+	//beego.Debug(Apps)
 	c.Data["Apps"] = Apps
 
 	str := app_func.Md5([]byte("hehehe"))

@@ -1,9 +1,16 @@
 package models
 
 import (
+	"appcenter/common/app_cache"
+	. "appcenter/common/app_ckey"
+	"appcenter/common/app_func"
 	"appcenter/common/app_mongo"
+	"appcenter/common/app_redis"
+	"github.com/astaxie/beego"
+	"github.com/garyburd/redigo/redis"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
+	"strconv"
 	"time"
 )
 
@@ -13,8 +20,8 @@ const (
 
 type UserAppInfo struct {
 	//ID         bson.ObjectId `bson:"_id,omitempty"`
-	AppId      int       `bson:"app_id"     json:"appid"`
-	UserId     int       `bson:"user_id"      json:"user_id"`
+	AppId      int64     `bson:"app_id"     json:"appid"`
+	UserId     string    `bson:"user_id"      json:"user_id"`
 	Udid       string    `bson:"udid" json:"udid"`
 	Version    string    `bson:"version" json:"version"`
 	CreateDate time.Time `bson:"create_date" json:"create_date"`
@@ -22,7 +29,7 @@ type UserAppInfo struct {
 
 //查询数据
 func GetAllUserApps(uasf *UserAppSearchForm) (code int, mlists []*UserAppInfo) {
-	//func GetAllUserApps(uasf *UserAppSearchForm) (code int, err error, mlist []interface{}) {
+
 	mConn := app_mongo.Conn()
 	defer mConn.Close()
 	c := mConn.DB("").C(UserAppTable)
@@ -42,6 +49,61 @@ func GetAllUserApps(uasf *UserAppSearchForm) (code int, mlists []*UserAppInfo) {
 	}
 
 	return
+}
+
+/**
+ *	根据 用户的udid,appid 获取相应的信息
+ */
+func GetUserAppsByUdid(uid string, udid string, appid int64) (uai *UserAppInfo) {
+
+	if uai = GetUserAppsCacheByUdid(uid, udid, appid); uai == nil {
+		user := UserAppSearchForm{UserId: uid, Udid: udid, AppId: appid}
+		_, users := GetAllUserApps(&user)
+		//udid_k := app_func.Md5([]byte(udid))
+		if len(users) > 0 {
+			for _, uai = range users {
+				//beego.Debug(uai)
+				SetUserAppsCacheByUdid(uid, udid, appid, uai)
+			}
+
+		}
+	}
+
+	return
+}
+
+/**
+ *	存入redis中
+ */
+func GetUserAppsCacheByUdid(uid string, udid string, appid int64) (uai *UserAppInfo) {
+	rConn := app_redis.Conn()
+	defer rConn.Close()
+	info := app_cache.CacheInfo{USERAPPLIST, []string{uid, app_func.Md5([]byte(udid)), strconv.FormatInt(appid, 10)}}
+	key, _ := app_cache.GetKey(info)
+	v, err := redis.Values(rConn.Do("HGETALL", key))
+	if err != nil {
+		panic(err)
+	}
+
+	if err := redis.ScanStruct(v, uai); err != nil {
+		panic(err)
+	}
+	return
+}
+
+func SetUserAppsCacheByUdid(uid string, udid string, appid int64, uai *UserAppInfo) {
+	rConn := app_redis.Conn()
+	defer rConn.Close()
+	//	udid_k := app_func.Md5([]byte(udid))
+	info := app_cache.CacheInfo{USERAPPLIST, []string{uid, app_func.Md5([]byte(udid)), strconv.FormatInt(appid, 10)}}
+	key, _ := app_cache.GetKey(info)
+	beego.Debug(key)
+	beego.Debug(uai)
+	//*
+	if _, err := rConn.Do("HMSET", redis.Args{}.Add(key).AddFlat(uai)...); err != nil {
+		panic(err)
+	}
+	//*/
 }
 
 // 组织封装数据

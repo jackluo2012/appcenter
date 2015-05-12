@@ -15,4 +15,12 @@ type UserAppSearchForm struct {
 func main() {
 	u := UserAppSearchForm{}
 	fmt.Println(u)
+	m := map[string]map[string]string{}
+	mm, ok := m["kkk"]
+	if !ok {
+		mm = make(map[string]string)
+		m["kkk"] = mm
+	}
+	mm["k1k1k1"] = "sssss"
+	fmt.Println(m)
 }

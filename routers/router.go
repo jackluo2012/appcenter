@@ -20,6 +20,7 @@ func init() {
 		),
 	)
 	beego.AddNamespace(ns)
+
 	beego.Router("/", &controllers.IndexController{})
 	beego.Router("/show/:id", &controllers.IndexController{}, "get:Detail")
 }

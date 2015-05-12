@@ -67,7 +67,7 @@ func getFileUrl(file string) (path string) {
  *	get screens
  */
 
-func GetUploadScreensPath(appkey string) (urls []string) {
+func GetUploadScreensPath(appkey string) (urls string) {
 	//获取网站目录
 	working_dir := beego.AppConfig.String("appuploadpath") + appkey
 	url_path := beego.AppConfig.String("appurlpath") + appkey
@@ -80,7 +80,7 @@ func GetUploadScreensPath(appkey string) (urls []string) {
 	}
 	for _, filename := range files {
 		filename = url_path + filename
-		urls = append(urls, filename)
+		urls = urls + filename + "," //= append(urls, filename)
 	}
 	return
 }
@@ -138,4 +138,13 @@ func GetAppDownLoadUrl(appid int64) (url string) {
 
 	url = beego.AppConfig.String("downloadurl") + strconv.FormatInt(appid, 10)
 	return
+}
+
+/**
+ * 验证密码
+ */
+func CheckSecurity(uid string, secretkey string) bool {
+
+	sk := beego.AppConfig.String("securitykey")
+	return Md5([]byte(uid+sk)) == secretkey
 }

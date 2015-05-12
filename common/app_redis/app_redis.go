@@ -3,9 +3,26 @@ package app_redis
 import (
 	"github.com/astaxie/beego"
 	"github.com/garyburd/redigo/redis"
+	//	"github.com/jackluo2012/Redis"
 	"time"
 )
 
+/*
+func Connect() Redis.RedisType {
+	//*
+	server := beego.AppConfig.String("cache::server")
+	password := beego.AppConfig.String("cache::password")
+	port, _ := beego.AppConfig.Int("cache::port")
+	db, _ := beego.AppConfig.Int("cache::db")
+
+	red := Redis.RedisType{Host: server, Port: port, Password: password, DB: db}
+	red.Connect()
+
+	return red
+}
+
+//*/
+//**
 var pool *redis.Pool
 
 func Conn() redis.Conn {
@@ -43,3 +60,5 @@ func init() {
 
 	pool = newPool(server, password)
 }
+
+//*/
