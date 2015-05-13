@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/validation"
+	"strconv"
 	"time"
 )
 
@@ -103,7 +104,7 @@ func (u *UserAppController) AppInsert() {
 		return
 	}
 
-	createDate := time.Now()
+	createDate := strconv.FormatInt(time.Now().Unix(), 10)
 	user_app := models.NewUserApp(&user_app_form, createDate)
 
 	beego.Debug("NewUserApp:", user_app)

@@ -4,13 +4,12 @@ import (
 	"appcenter/common/app_cache"
 	. "appcenter/common/app_ckey"
 	"appcenter/common/app_redis"
+	//	"github.com/astaxie/beego"
 	"github.com/garyburd/redigo/redis"
-
-	//	"strconv"
 )
 
 /**
- *	获取app数据
+ *	获取所有的app数据
  */
 func GetAppsList() (apps []*AppUpload) {
 	rConn := app_redis.Conn()
@@ -35,6 +34,33 @@ func GetAppsList() (apps []*AppUpload) {
 		panic(err)
 	}
 	return
+}
+
+/**
+ *	、获取单条数
+ */
+
+func GetAppCacheInfoById(appid int64) *AppUpload {
+	rConn := app_redis.Conn()
+	defer rConn.Close()
+	//beego.Debug("调用到了哈哈")
+	info := app_cache.CacheInfo{APPCENTERLIST, appid}
+	key, err := app_cache.GetKey(info)
+
+	v, err := redis.Values(rConn.Do("HGETALL", key))
+	if err != nil {
+		panic(err)
+	}
+
+	if len(v) > 0 {
+		var aud AppUpload
+		if err := redis.ScanStruct(v, &aud); err != nil {
+			panic(err)
+		}
+		return &aud
+	}
+	return nil
+
 }
 
 /**

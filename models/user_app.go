@@ -11,7 +11,7 @@ import (
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 	"strconv"
-	"time"
+	//	"time"
 )
 
 const (
@@ -20,11 +20,11 @@ const (
 
 type UserAppInfo struct {
 	//ID         bson.ObjectId `bson:"_id,omitempty"`
-	AppId      int64     `bson:"app_id"     json:"appid"`
-	UserId     string    `bson:"user_id"      json:"user_id"`
-	Udid       string    `bson:"udid" json:"udid"`
-	Version    string    `bson:"version" json:"version"`
-	CreateDate time.Time `bson:"create_date" json:"create_date"`
+	AppId      int64  `bson:"app_id"     json:"appid" redis:"id"`
+	UserId     string `bson:"user_id"      json:"user_id" redis:"uid"`
+	Udid       string `bson:"udid" json:"udid" redis:"udid"`
+	Version    string `bson:"version" json:"version" redis:"v"`
+	CreateDate string `bson:"create_date" json:"create_date" redis:"t"`
 }
 
 //查询数据
@@ -63,21 +63,23 @@ func GetUserAppsByUdid(uid string, udid string, appid int64) (uai *UserAppInfo) 
 		if len(users) > 0 {
 			for _, uai = range users {
 				//beego.Debug(uai)
-				SetUserAppsCacheByUdid(uid, udid, appid, uai)
+				SetUserAppsCacheByUdid(uai)
 			}
 
 		}
+		//	beego.Debug("未调用到哈哈")
 	}
-
+	//
 	return
 }
 
 /**
  *	存入redis中
  */
-func GetUserAppsCacheByUdid(uid string, udid string, appid int64) (uai *UserAppInfo) {
+func GetUserAppsCacheByUdid(uid string, udid string, appid int64) *UserAppInfo {
 	rConn := app_redis.Conn()
 	defer rConn.Close()
+	//beego.Debug("调用到了哈哈")
 	info := app_cache.CacheInfo{USERAPPLIST, []string{uid, app_func.Md5([]byte(udid)), strconv.FormatInt(appid, 10)}}
 	key, _ := app_cache.GetKey(info)
 	v, err := redis.Values(rConn.Do("HGETALL", key))
@@ -85,29 +87,52 @@ func GetUserAppsCacheByUdid(uid string, udid string, appid int64) (uai *UserAppI
 		panic(err)
 	}
 
-	if err := redis.ScanStruct(v, uai); err != nil {
-		panic(err)
+	if len(v) > 0 {
+		var uai UserAppInfo
+		if err := redis.ScanStruct(v, &uai); err != nil {
+			panic(err)
+		}
+		return &uai
 	}
-	return
+	return nil
 }
 
-func SetUserAppsCacheByUdid(uid string, udid string, appid int64, uai *UserAppInfo) {
+/**
+ *	存入redis 中
+ */
+func SetUserAppsCacheByUdid(uai *UserAppInfo) {
 	rConn := app_redis.Conn()
 	defer rConn.Close()
 	//	udid_k := app_func.Md5([]byte(udid))
-	info := app_cache.CacheInfo{USERAPPLIST, []string{uid, app_func.Md5([]byte(udid)), strconv.FormatInt(appid, 10)}}
+	info := app_cache.CacheInfo{USERAPPLIST, []string{uai.UserId, app_func.Md5([]byte(uai.Udid)), strconv.FormatInt(uai.AppId, 10)}}
 	key, _ := app_cache.GetKey(info)
-	beego.Debug(key)
-	beego.Debug(uai)
-	//*
+	/*
+		beego.Debug(key)
+		beego.Debug(uai)
+	*/
 	if _, err := rConn.Do("HMSET", redis.Args{}.Add(key).AddFlat(uai)...); err != nil {
 		panic(err)
 	}
-	//*/
+}
+
+/**
+ *	删除
+ */
+
+func RemoveUserAppsCacheByUdid(uai *UserAppInfo) {
+	rConn := app_redis.Conn()
+	defer rConn.Close()
+
+	info := app_cache.CacheInfo{USERAPPLIST, []string{uai.UserId, app_func.Md5([]byte(uai.Udid)), strconv.FormatInt(uai.AppId, 10)}}
+	key, _ := app_cache.GetKey(info)
+	if _, err := rConn.Do("DEL", key); err != nil {
+		panic(err)
+	}
+	beego.Debug("删除 了吗?")
 }
 
 // 组织封装数据
-func NewUserApp(apf *UserAppForm, t time.Time) *UserAppInfo {
+func NewUserApp(apf *UserAppForm, t string) *UserAppInfo {
 	user_app_info := UserAppInfo{
 		UserId:  apf.UserId,
 		AppId:   apf.AppId,
@@ -123,9 +148,13 @@ func (uai *UserAppInfo) Insert() (code int, err error) {
 	defer mConn.Close()
 	c := mConn.DB("").C(UserAppTable)
 	err = c.Insert(uai)
-	code = 0
+
 	if err != nil {
 		code = -1
+	} else {
+		code = 0
+		//放入redis 中
+		SetUserAppsCacheByUdid(uai)
 	}
 	return
 }
@@ -157,6 +186,8 @@ func (uai *UserAppInfo) FindByAttribute(uaf *UserAppForm, v int) (code int, err 
 func (uai *UserAppInfo) UpdateVersion(uaf *UserAppForm) (code int, err error) {
 	mConn := app_mongo.Conn()
 	defer mConn.Close()
+	//删除缓存中的数据
+	RemoveUserAppsCacheByUdid(uai)
 	c := mConn.DB("").C(UserAppTable)
 	err = c.Update(bson.M{"user_id": uai.UserId, "app_id": uai.AppId, "udid": uai.Udid}, bson.M{"$set": bson.M{"version": uaf.Version}})
 
@@ -168,7 +199,9 @@ func (uai *UserAppInfo) UpdateVersion(uaf *UserAppForm) (code int, err error) {
 		}
 	} else {
 		code = 0
+		SetUserAppsCacheByUdid(uai)
 	}
+
 	return
 }
 

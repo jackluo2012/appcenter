@@ -60,7 +60,7 @@
     <div class="listC_M">
       <p class="size1">
         <span >
-          <a href="/show/{{.Appid}}">{{.Name}}</a>
+          <a href="/show/{{.Appid}}?uid={{$.uid}}&udid={{$.udid}}&secretkey={{$.secretkey}}">{{.Name}}</a>
         </span>
       </p>
       <p class="size3">
@@ -75,7 +75,14 @@
   <a class="download_Button" href="{{.DownLoadUrl}}" data-id="">
     <div class="listC_R">
       <span>
-        下载 </span>
+      {{if eq .Install "3"}}
+        更新 
+      {{else if eq .Install "2"}}  
+        已下载
+      {{else }}    
+        下载 
+      {{end}}
+        </span>
     </div>
   </a>
 {{end}}

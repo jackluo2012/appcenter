@@ -32,24 +32,32 @@
 				<div class="app-part1 clearfix">
 					<div class="app-l">
 						<div class="app-img">
-							<img src="img/applist_1.png"></div>
+							<img src="{{.AppInfo.IconUrl}}"></div>
 					</div>
 					<div class="app-m clearfix">
 						<div class="app-m-line1">
-							<span class="app-name"> <b>应用名称</b>
+							<span class="app-name"> <b>{{.AppInfo.Name}}</b>
 							</span>
 						</div>
 						<div class="app-m-line2">
 						    <div id="appInfo1" style="margin-bottom:5px;">
-						    <label class="app-downCout">下载:&nbsp;<span class="download_count">15</span>次</label>
-							<span class="app-size" style="margin-left:20px">大小:&nbsp;21.2MB</span>
-							<span class="app-version1" style="margin-left:20px">版本号:&nbsp;3.2.1</span>
-							<span class="app-developer" style="margin-left:20px">开发者:&nbsp;xxxxxx</span><br/>
+						    <label class="app-downCout">下载:&nbsp;<span class="download_count">{{.AppInfo.DownloadCounts}}</span>次</label>
+							<span class="app-size" style="margin-left:20px">大小:&nbsp;{{.AppInfo.Size}}</span>
+							<span class="app-version1" style="margin-left:20px">版本号:&nbsp;{{.AppInfo.Version}}</span>
+							<span class="app-developer" style="margin-left:20px">开发者:&nbsp;{{.AppInfo.Author}}</span><br/>
 						    </div>
-							<span class="app-update">更新时间:&nbsp;2015-5-6</span>
+							<span class="app-update">更新时间:&nbsp;{{.AppInfo.Created}}</span>
 						</div>
 						<div class="app-m-line3">
-							<a class="downloadUrl download_Button" href="#" >下载</a>
+							{{if eq .AppInfo.Install "3"}}
+							
+							<a class="downloadUrl download_Button" href="{{.DownLoadUrl}}" >更新</a>
+							{{else if eq .AppInfo.Install "2"}}
+							<a class="downloadUrl download_Button" href="#" >已安装</a>
+							{{else}}
+								<a class="downloadUrl download_Button" href="{{.DownLoadUrl}}" >下载</a>
+							{{end}}
+
 						</div>
 					</div>
 				</div>
@@ -57,7 +65,7 @@
 					<div class="part2-title"></div>
 					<span class="fontSize">介绍详情</span>
 					<div class="margi">
-						<div class="part2-description">************************</div>
+						<div class="part2-description">{{.AppInfo.Description}}</div>
 						<div class="app-carousel">
 			
 			<!-- loop---kitty 2014--09-28- end-->
@@ -67,16 +75,13 @@
 				<div class="span12">
 
 					<div id="owl-demo" class="owl-carousel">
-						
-						<div class="item">
-							<img src="/static/img/applist_1.png" alt="Owl Image">
-						</div>
-						<div class="item">
-							<img src="/static/img/applist_2.png" alt="Owl Image">
-						</div>
-						<div class="item">
-							<img src="/static/img/applist_3.png" alt="Owl Image">
-						</div>
+						{{range $k, $v := .Screens}}
+							{{if $v}}
+								<div class="item">
+									<img src="{{$v}}" alt="Owl Image">
+								</div>
+							{{end}}
+						{{end}}
 						
 					</div>
 

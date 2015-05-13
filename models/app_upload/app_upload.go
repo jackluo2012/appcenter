@@ -5,7 +5,7 @@ import (
 	//	. "appcenter/common/app_ckey"
 	"appcenter/common/app_func"
 	_ "appcenter/common/app_mysql"
-	"appcenter/models"
+	//	"appcenter/models"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 )
@@ -33,7 +33,7 @@ type AppUpload struct {
 	Screens        string `orm:"-" redis:"ss"`
 	Size           string `orm:"-" redis:"sz"`
 	IconUrl        string `orm:"-" redis:"iu"`
-	Install        uint8  `orm:"-" redis:"il"`
+	Install        string `orm:"-" redis:"il"`
 	DownLoadUrl    string `orm:"-" redis:"dlu"`
 	/*
 		AndroidUrl     string `orm:"-"`
@@ -44,28 +44,37 @@ type AppUpload struct {
 }
 
 //var apps []AppUpload
-func SearchAppLists(ct int, uid string, udid string, appid int64) (apps []*AppUpload) {
+func SearchAppLists(ct int) (apps []*AppUpload) {
 	if ct == 1 {
 
 	}
 	//var uai *models.UserAppInfo
 	//获取用户的信息
-	beego.Debug(models.GetUserAppsByUdid(uid, udid, appid))
+	//	beego.Debug(models.GetUserAppsByUdid(uid, udid, appid))
+	//缓存中拿 数据
 	apps = GetAppsList()
 	if len(apps) == 0 {
 		AppLists().Filter("applisted", "1").Filter("public", "1").All(&apps)
 		for _, app := range apps {
+
 			app.IconUrl = app_func.GetUploadPath("icon", app.Appkey)
 			app.Category = app_func.CateTran(app.Category)
 			app.DownLoadUrl = app_func.GetAppDownLoadUrl(app.Appid)
 			zip_url := app_func.GetUploadPath("zip", app.Appkey)
 			app.Size = app_func.GetFileSize(zip_url)
-			app.Install = 1
 			app.Screens = app_func.GetUploadScreensPath(app.Appkey)
 			SetAppsList(app.Appid, app)
 		}
 	}
 
+	return
+}
+
+/**
+ * 暂时先这样子写了
+ */
+func GetAppInfoById(appid int64) (app *AppUpload) {
+	app = GetAppCacheInfoById(appid)
 	return
 }
 
