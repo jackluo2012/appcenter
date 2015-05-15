@@ -4,9 +4,11 @@ type UserAppForm struct {
 	UserId  string `form:"userid"    valid:"Required"`
 	AppId   int64  `form:"appid"     valid:"Required"`
 	Udid    string `form:"udid" valid:"Required"`
-	Version string `form:"version" valid:"Required"`
+	Version string `form:"version" `
 }
-
+type UserAppFormSlice struct {
+	UserAppForms []UserAppForm `json:"lists"`
+}
 type UserAppSearchForm struct {
 	UserId   string `form:"userid"    valid:"Required"`
 	PageNo   int    `form:"pageno"     valid:"Required"`

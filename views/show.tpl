@@ -51,11 +51,11 @@
 						<div class="app-m-line3">
 							{{if eq .AppInfo.Install "3"}}
 							
-							<a class="downloadUrl download_Button" href="{{.DownLoadUrl}}" >更新</a>
+							<a class="downloadUrl download_Button" href="{{.AppInfo.DownLoadUrl}}" >更新</a>
 							{{else if eq .AppInfo.Install "2"}}
 							<a class="downloadUrl download_Button" href="#" >已安装</a>
 							{{else}}
-								<a class="downloadUrl download_Button" href="{{.DownLoadUrl}}" >下载</a>
+								<a class="downloadUrl download_Button" href="{{.AppInfo.DownLoadUrl}}" >下载</a>
 							{{end}}
 
 						</div>

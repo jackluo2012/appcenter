@@ -209,6 +209,8 @@ func (uai *UserAppInfo) UpdateVersion(uaf *UserAppForm) (code int, err error) {
 func (uai *UserAppInfo) Remove() (code int, err error) {
 	mConn := app_mongo.Conn()
 	defer mConn.Close()
+	//删除缓存中的数据
+	RemoveUserAppsCacheByUdid(uai)
 	c := mConn.DB("").C(UserAppTable)
 	err = c.Remove(bson.M{"user_id": uai.UserId, "app_id": uai.AppId, "udid": uai.Udid})
 

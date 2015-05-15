@@ -3,6 +3,7 @@ package controllers
 import (
 	"appcenter/common/app_error"
 	"appcenter/models"
+	"appcenter/models/app_upload"
 	"encoding/json"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/validation"
@@ -71,52 +72,67 @@ func (u *UserAppController) AppList() {
 // @Failure 403 body is empty
 // @router /app_add [post]
 func (u *UserAppController) AppInsert() {
-	user_app_form := models.UserAppForm{}
+	user_app_form := models.UserAppFormSlice{}
 	json.Unmarshal(u.Ctx.Input.RequestBody, &user_app_form)
-
-	beego.Debug("ParseRegsiterForm:", &user_app_form)
-	valid := validation.Validation{}
-	ok, err := valid.Valid(&user_app_form)
-	//如果存在错误
-	if err != nil {
-		beego.Debug("ValidRegsiterForm:", err)
-		u.Data["json"] = app_error.ErrInputData
-		u.ServeJson()
-		return
-	}
-	if !ok {
-		beego.Debug("ValidRegsiterForm errors:")
-		for _, err := range valid.Errors {
-			beego.Debug(err.Key, err.Message)
+	//*
+	ids := map[int64]string{}
+	//uafs := []models.UserAppForm{}
+	err_info := app_error.CodeInfo{}
+	// 检查是否重复
+	for _, uaf := range user_app_form.UserAppForms {
+		//uaf.(UserAppForm)
+		//beego.Debug(uaf)
+		//*
+		if ids[uaf.AppId] == "1" {
+			err_info = app_error.ErrDataDuplication
+			//return
+			break
 		}
-		u.Data["json"] = app_error.ErrDupUser
+		//beego.Debug(uaf.AppId)
+
+		ids[uaf.AppId] = "1"
+		//获取应用的当前版本信息
+
+		aud := app_upload.GetAppInfoById(uaf.AppId)
+		//	beego.Debug("每次都有信息...", aud)
+		if aud == nil {
+			err_info = app_error.ErrUserAppInfoNoExist
+			//return
+			break
+		}
+		valid := validation.Validation{}
+		ok, err := valid.Valid(&uaf)
+		//如果存在错误
+		if err != nil {
+			err_info = app_error.ErrInputData
+			break
+		}
+		if !ok {
+			err_info = app_error.ErrDupUser
+			break
+		}
+		uaf.Version = aud.Version
+		//检查是否添加过了
+		user_app_info := &models.UserAppInfo{}
+		code, _ := user_app_info.FindByAttribute(&uaf, 1)
+
+		if code != 404 {
+			err_info = app_error.ErrUserAppInfoExist
+			break
+		}
+		createDate := strconv.FormatInt(time.Now().Unix(), 10)
+		user_app := models.NewUserApp(&uaf, createDate)
+		if _, err := user_app.Insert(); err != nil {
+			err_info = app_error.ErrDatabase
+			break
+		}
+	}
+	//检查是否有错
+	if err_info.Code != 0 {
+		u.Data["json"] = err_info
 		u.ServeJson()
 		return
 	}
-	//检查是否添加过了
-	user_app_info := &models.UserAppInfo{}
-	code, _ := user_app_info.FindByAttribute(&user_app_form, 1)
-
-	if code != 404 {
-		beego.Debug("UserExistApp:", user_app_info)
-		u.Data["json"] = app_error.ErrUserAppInfoExist
-		u.ServeJson()
-		return
-	}
-
-	createDate := strconv.FormatInt(time.Now().Unix(), 10)
-	user_app := models.NewUserApp(&user_app_form, createDate)
-
-	beego.Debug("NewUserApp:", user_app)
-
-	if _, err := user_app.Insert(); err != nil {
-		beego.Debug("InsertUserApp:", err)
-		u.Data["json"] = app_error.ErrDatabase
-		u.ServeJson()
-		return
-	}
-
-	// add redis cache
 
 	u.Data["json"] = app_error.SuccessData
 	u.ServeJson()
@@ -129,43 +145,64 @@ func (u *UserAppController) AppInsert() {
 // @Failure 403 body is empty
 // @router /app_update [post]
 func (u *UserAppController) AppUpdate() {
-	user_app_form := models.UserAppForm{}
+	user_app_form := models.UserAppFormSlice{}
 	json.Unmarshal(u.Ctx.Input.RequestBody, &user_app_form)
-
-	beego.Debug("ParseRegsiterForm:", &user_app_form)
-	valid := validation.Validation{}
-	ok, err := valid.Valid(&user_app_form)
-	//如果存在错误
-	if err != nil {
-		beego.Debug("ValidRegsiterForm:", err)
-		u.Data["json"] = app_error.ErrInputData
-		u.ServeJson()
-		return
-	}
-	if !ok {
-		beego.Debug("ValidRegsiterForm errors:")
-		for _, err := range valid.Errors {
-			beego.Debug(err.Key, err.Message)
+	//*
+	ids := map[int64]string{}
+	//uafs := []models.UserAppForm{}
+	err_info := app_error.CodeInfo{}
+	// 检查是否重复
+	for _, uaf := range user_app_form.UserAppForms {
+		//uaf.(UserAppForm)
+		//beego.Debug(uaf)
+		//*
+		if ids[uaf.AppId] == "1" {
+			err_info = app_error.ErrDataDuplication
+			//return
+			break
 		}
-		u.Data["json"] = app_error.ErrDupUser
-		u.ServeJson()
-		return
-	}
-	//检查是否添加过了
-	user_app_info := &models.UserAppInfo{}
-	code, _ := user_app_info.FindByAttribute(&user_app_form, 1)
-	if code == 404 {
-		//beego.Debug("这里有问题:", user_app_info)
-		u.Data["json"] = app_error.ErrUserAppInfoNoExist
-		u.ServeJson()
-		return
-	}
+		//beego.Debug(uaf.AppId)
 
-	code, _ = user_app_info.UpdateVersion(&user_app_form)
+		ids[uaf.AppId] = "1"
+		//获取应用的当前版本信息
 
-	if code == -1 {
-		beego.Debug("InsertUserApp:", err)
-		u.Data["json"] = app_error.ErrDatabase
+		aud := app_upload.GetAppInfoById(uaf.AppId)
+		//	beego.Debug("每次都有信息...", aud)
+		if aud == nil {
+			err_info = app_error.ErrUserAppInfoNoExist
+			//return
+			break
+		}
+		valid := validation.Validation{}
+		ok, err := valid.Valid(&uaf)
+		//如果存在错误
+		if err != nil {
+			err_info = app_error.ErrInputData
+			break
+		}
+		if !ok {
+			err_info = app_error.ErrDupUser
+			break
+		}
+		uaf.Version = aud.Version
+		//检查是否添加过了
+		user_app_info := &models.UserAppInfo{}
+		code, _ := user_app_info.FindByAttribute(&uaf, 1)
+
+		if code == 404 {
+			err_info = app_error.ErrUserAppInfoNoExist
+			break
+		}
+		code, _ = user_app_info.UpdateVersion(&uaf)
+
+		if code == -1 {
+			err_info = app_error.ErrDatabase
+			break
+		}
+	}
+	//检查是否有错
+	if err_info.Code != 0 {
+		u.Data["json"] = err_info
 		u.ServeJson()
 		return
 	}
@@ -183,47 +220,112 @@ func (u *UserAppController) AppUpdate() {
 // @Failure 403 body is empty
 // @router /app_del [post]
 func (u *UserAppController) AppRemove() {
-	user_app_form := models.UserAppForm{}
+	user_app_form := models.UserAppFormSlice{}
 	json.Unmarshal(u.Ctx.Input.RequestBody, &user_app_form)
-
-	beego.Debug("ParseRegsiterForm:", &user_app_form)
-	valid := validation.Validation{}
-	ok, err := valid.Valid(&user_app_form)
-	//如果存在错误
-	if err != nil {
-		beego.Debug("ValidRegsiterForm:", err)
-		u.Data["json"] = app_error.ErrInputData
-		u.ServeJson()
-		return
-	}
-	if !ok {
-		beego.Debug("ValidRegsiterForm errors:")
-		for _, err := range valid.Errors {
-			beego.Debug(err.Key, err.Message)
+	//*
+	ids := map[int64]string{}
+	//uafs := []models.UserAppForm{}
+	err_info := app_error.CodeInfo{}
+	// 检查是否重复
+	for _, uaf := range user_app_form.UserAppForms {
+		//uaf.(UserAppForm)
+		//beego.Debug(uaf)
+		//*
+		if ids[uaf.AppId] == "1" {
+			err_info = app_error.ErrDataDuplication
+			//return
+			break
 		}
-		u.Data["json"] = app_error.ErrDupUser
+		//beego.Debug(uaf.AppId)
+
+		ids[uaf.AppId] = "1"
+		//获取应用的当前版本信息
+
+		aud := app_upload.GetAppInfoById(uaf.AppId)
+		//	beego.Debug("每次都有信息...", aud)
+		if aud == nil {
+			err_info = app_error.ErrUserAppInfoNoExist
+			//return
+			break
+		}
+		valid := validation.Validation{}
+		ok, err := valid.Valid(&uaf)
+		//如果存在错误
+		if err != nil {
+			err_info = app_error.ErrInputData
+			break
+		}
+		if !ok {
+			beego.Debug("ValidRegsiterForm errors:")
+			for _, err := range valid.Errors {
+				beego.Debug(err.Key, err.Message)
+			}
+			err_info = app_error.ErrDupUser
+			break
+		}
+		uaf.Version = aud.Version
+		//检查是否添加过了
+		user_app_info := &models.UserAppInfo{}
+		code, _ := user_app_info.FindByAttribute(&uaf, 1)
+
+		if code == 404 {
+			err_info = app_error.ErrUserAppInfoNoExist
+			break
+		}
+		code, _ = user_app_info.Remove()
+		if code == -1 {
+			err_info = app_error.ErrDatabase
+			break
+		}
+	}
+	//检查是否有错
+	if err_info.Code != 0 {
+		u.Data["json"] = err_info
 		u.ServeJson()
 		return
 	}
-	//检查数据是否存在
-	user_app_info := &models.UserAppInfo{}
-	code, _ := user_app_info.FindByAttribute(&user_app_form, 1)
-	if code == 404 {
-		beego.Debug("这里有问题:", user_app_info)
-		u.Data["json"] = app_error.ErrUserAppInfoNoExist
-		u.ServeJson()
-		return
-	}
+	/*
+		user_app_form := models.UserAppForm{}
+		json.Unmarshal(u.Ctx.Input.RequestBody, &user_app_form)
 
-	code, _ = user_app_info.Remove()
+		beego.Debug("ParseRegsiterForm:", &user_app_form)
+		valid := validation.Validation{}
+		ok, err := valid.Valid(&user_app_form)
+		//如果存在错误
+		if err != nil {
+			beego.Debug("ValidRegsiterForm:", err)
+			u.Data["json"] = app_error.ErrInputData
+			u.ServeJson()
+			return
+		}
+		if !ok {
+			beego.Debug("ValidRegsiterForm errors:")
+			for _, err := range valid.Errors {
+				beego.Debug(err.Key, err.Message)
+			}
+			u.Data["json"] = app_error.ErrDupUser
+			u.ServeJson()
+			return
+		}
+		//检查数据是否存在
+		user_app_info := &models.UserAppInfo{}
+		code, _ := user_app_info.FindByAttribute(&user_app_form, 1)
+		if code == 404 {
+			beego.Debug("这里有问题:", user_app_info)
+			u.Data["json"] = app_error.ErrUserAppInfoNoExist
+			u.ServeJson()
+			return
+		}
 
-	if code == -1 {
-		beego.Debug("InsertUserApp:", err)
-		u.Data["json"] = app_error.ErrDatabase
-		u.ServeJson()
-		return
-	}
+		code, _ = user_app_info.Remove()
 
+		if code == -1 {
+			beego.Debug("InsertUserApp:", err)
+			u.Data["json"] = app_error.ErrDatabase
+			u.ServeJson()
+			return
+		}
+	*/
 	// update redis cache
 
 	u.Data["json"] = app_error.SuccessData

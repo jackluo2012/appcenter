@@ -17335,3 +17335,714 @@
 2015/05/13 14:48:44 [router.go:845] [D] | GET        | /img/search_clear.png                    | 1.0001ms         | notmatch   | 
 2015/05/13 14:48:44 [router.go:845] [D] | GET        | /img/search_down.png                     | 4.0002ms         | notmatch   | 
 2015/05/13 15:12:54 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:17:39 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:17:41 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:18:09 [index.go:24] [D] false 
+2015/05/15 09:18:09 [router.go:845] [D] | GET        | /                                        | 51.0029ms        | match      | /                                        | 
+2015/05/15 09:18:09 [router.go:845] [D] | GET        | /img/search_clear.png                    | 1.0001ms         | notmatch   | 
+2015/05/15 09:18:09 [router.go:845] [D] | GET        | /img/search_down.png                     | 2.0002ms         | notmatch   | 
+2015/05/15 09:18:16 [router.go:845] [D] | GET        | /docs                                    | 0                | match      | /docs                                    | 
+2015/05/15 09:18:16 [router.go:845] [D] | GET        | /docs                                    | 1ms              | match      | /docs                                    | 
+2015/05/15 09:18:16 [router.go:845] [D] | GET        | /docs/user                               | 1ms              | match      | /docs/*                                  | 
+2015/05/15 09:18:16 [router.go:845] [D] | GET        | /docs/user                               | 1.0001ms         | match      | /docs/*                                  | 
+2015/05/15 09:26:27 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:26:29 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:27:16 [router.go:845] [D] | OPTIONS    | /v1/user/app_add                         | 1.0001ms         | notmatch   | 
+2015/05/15 09:27:50 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:28:04 [router.go:845] [D] | OPTIONS    | /v1/user/app_add                         | 3.0001ms         | notmatch   | 
+2015/05/15 09:28:57 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:29:00 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:29:05 [router.go:845] [D] | OPTIONS    | /v1/user/app_add                         | 3.0001ms         | notmatch   | 
+2015/05/15 09:29:55 [router.go:845] [D] | OPTIONS    | /v1/user/app_add                         | 0                | notmatch   | 
+2015/05/15 09:30:56 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:31:00 [main.go:25] [D]  
+2015/05/15 09:31:00 [router.go:845] [D] | OPTIONS    | /v1/user/app_add                         | 3.0002ms         | notmatch   | 
+2015/05/15 09:31:01 [main.go:25] [D]  
+2015/05/15 09:31:01 [router.go:845] [D] | OPTIONS    | /v1/user/app_add                         | 1ms              | notmatch   | 
+2015/05/15 09:31:10 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:31:12 [main.go:25] [D]  
+2015/05/15 09:31:12 [router.go:845] [D] | OPTIONS    | /v1/user/app_add                         | 1.0001ms         | notmatch   | 
+2015/05/15 09:32:12 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:32:14 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:32:19 [main.go:25] [D]  
+2015/05/15 09:32:19 [router.go:845] [D] | OPTIONS    | /v1/user/app_add                         | 4.0003ms         | notmatch   | 
+2015/05/15 09:32:54 [router.go:845] [D] | GET        | /docs                                    | 0                | match      | /docs                                    | 
+2015/05/15 09:32:54 [router.go:845] [D] | GET        | /docs                                    | 0                | match      | /docs                                    | 
+2015/05/15 09:32:54 [router.go:845] [D] | GET        | /docs/user                               | 1ms              | match      | /docs/*                                  | 
+2015/05/15 09:32:54 [router.go:845] [D] | GET        | /docs/user                               | 26.0015ms        | match      | /docs/*                                  | 
+2015/05/15 09:33:00 [main.go:25] [D]  
+2015/05/15 09:33:00 [user_app.go:75] [D] 什么情况 
+2015/05/15 09:33:00 [user_app.go:78] [D] ParseRegsiterForm: [] 
+2015/05/15 09:33:00 [router.go:845] [D] | POST       | /v1/user/app_add                         | 1ms              | match      | /v1/user/app_add                         | 
+2015/05/15 09:33:06 [main.go:25] [D]  
+2015/05/15 09:33:06 [user_app.go:75] [D] 什么情况 
+2015/05/15 09:33:06 [user_app.go:78] [D] ParseRegsiterForm: [] 
+2015/05/15 09:33:06 [router.go:845] [D] | POST       | /v1/user/app_add                         | 1ms              | match      | /v1/user/app_add                         | 
+2015/05/15 09:33:20 [main.go:25] [D]  
+2015/05/15 09:33:20 [user_app.go:75] [D] 什么情况 
+2015/05/15 09:33:20 [user_app.go:78] [D] ParseRegsiterForm: [] 
+2015/05/15 09:33:20 [router.go:845] [D] | POST       | /v1/user/app_add                         | 1.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 09:33:59 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:34:02 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:34:11 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:34:13 [main.go:25] [D]  
+2015/05/15 09:34:13 [user_app.go:78] [D] [91 123 34 117 115 101 114 105 100 34 58 34 49 48 48 48 48 49 34 44 34 97 112 112 105 100 34 58 56 56 57 44 34 118 101 114 115 105 111 110 34 58 34 49 46 48 34 44 34 117 100 105 100 34 58 34 102 101 56 48 58 58 55 49 51 100 58 51 54 101 99 58 101 49 101 100 58 102 52 98 34 125 93] 
+2015/05/15 09:34:13 [user_app.go:80] [D] ParseRegsiterForm: [] 
+2015/05/15 09:34:13 [router.go:845] [D] | POST       | /v1/user/app_add                         | 2.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 09:34:14 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:34:17 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:44:40 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:44:42 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:44:55 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:44:58 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:45:00 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:45:15 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:45:17 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:45:23 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:45:26 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:48:49 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:48:52 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:48:55 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:48:57 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:49:02 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:49:04 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:49:11 [main.go:25] [D]  
+2015/05/15 09:49:11 [user_app.go:82] [D] [91 123 34 117 115 101 114 105 100 34 58 34 49 48 48 48 48 49 34 44 34 97 112 112 105 100 34 58 56 56 57 44 34 118 101 114 115 105 111 110 34 58 34 49 46 48 34 44 34 117 100 105 100 34 58 34 102 101 56 48 58 58 55 49 51 100 58 51 54 101 99 58 101 49 101 100 58 102 52 98 34 125 93] 
+2015/05/15 09:49:11 [user_app.go:84] [D] ParseRegsiterForm: &{[]} 
+2015/05/15 09:49:11 [router.go:845] [D] | POST       | /v1/user/app_add                         | 1.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 09:52:02 [main.go:25] [D]  
+2015/05/15 09:52:02 [user_app.go:82] [D] [123 34 117 115 101 114 105 100 34 58 34 49 48 48 48 48 49 34 44 34 97 112 112 105 100 34 58 56 56 57 44 34 118 101 114 115 105 111 110 34 58 34 49 46 48 34 44 34 117 100 105 100 34 58 34 102 101 56 48 58 58 55 49 51 100 58 51 54 101 99 58 101 49 101 100 58 102 52 98 34 125 44 123 34 117 115 101 114 105 100 34 58 34 49 48 48 48 48 49 34 44 34 97 112 112 105 100 34 58 56 56 57 44 34 118 101 114 115 105 111 110 34 58 34 49 46 48 34 44 34 117 100 105 100 34 58 34 102 101 56 48 58 58 55 49 51 100 58 51 54 101 99 58 101 49 101 100 58 102 52 98 34 125 44 123 34 117 115 101 114 105 100 34 58 34 49 48 48 48 48 49 34 44 34 97 112 112 105 100 34 58 56 56 57 44 34 118 101 114 115 105 111 110 34 58 34 49 46 48 34 44 34 117 100 105 100 34 58 34 102 101 56 48 58 58 55 49 51 100 58 51 54 101 99 58 101 49 101 100 58 102 52 98 34 125] 
+2015/05/15 09:52:02 [user_app.go:84] [D] ParseRegsiterForm: &{[]} 
+2015/05/15 09:52:02 [router.go:845] [D] | POST       | /v1/user/app_add                         | 1.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 09:53:24 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:53:26 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:53:32 [main.go:25] [D]  
+2015/05/15 09:53:32 [user_app.go:82] [D] [123 34 117 115 101 114 105 100 34 58 34 49 48 48 48 48 49 34 44 34 97 112 112 105 100 34 58 56 56 57 44 34 118 101 114 115 105 111 110 34 58 34 49 46 48 34 44 34 117 100 105 100 34 58 34 102 101 56 48 58 58 55 49 51 100 58 51 54 101 99 58 101 49 101 100 58 102 52 98 34 125 44 123 34 117 115 101 114 105 100 34 58 34 49 48 48 48 48 49 34 44 34 97 112 112 105 100 34 58 56 56 57 44 34 118 101 114 115 105 111 110 34 58 34 49 46 48 34 44 34 117 100 105 100 34 58 34 102 101 56 48 58 58 55 49 51 100 58 51 54 101 99 58 101 49 101 100 58 102 52 98 34 125 44 123 34 117 115 101 114 105 100 34 58 34 49 48 48 48 48 49 34 44 34 97 112 112 105 100 34 58 56 56 57 44 34 118 101 114 115 105 111 110 34 58 34 49 46 48 34 44 34 117 100 105 100 34 58 34 102 101 56 48 58 58 55 49 51 100 58 51 54 101 99 58 101 49 101 100 58 102 52 98 34 125] 
+2015/05/15 09:53:32 [user_app.go:84] [D] ParseRegsiterForm: [] 
+2015/05/15 09:53:32 [router.go:845] [D] | POST       | /v1/user/app_add                         | 2.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 09:56:26 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:56:29 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:56:31 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:57:27 [app.go:103] [I] http server Running on :8080
+2015/05/15 09:57:38 [app.go:103] [I] http server Running on :8080
+2015/05/15 10:00:57 [app.go:103] [I] http server Running on :8080
+2015/05/15 10:00:59 [app.go:103] [I] http server Running on :8080
+2015/05/15 10:06:04 [parser.go:130] [I] generate router from comments 
+2015/05/15 10:06:04 [app.go:103] [I] http server Running on :8080
+2015/05/15 10:06:08 [app.go:103] [I] http server Running on :8080
+2015/05/15 10:06:11 [app.go:103] [I] http server Running on :8080
+2015/05/15 10:06:44 [app.go:103] [I] http server Running on :8080
+2015/05/15 10:06:47 [app.go:103] [I] http server Running on :8080
+2015/05/15 10:07:13 [app.go:103] [I] http server Running on :8080
+2015/05/15 10:07:16 [app.go:103] [I] http server Running on :8080
+2015/05/15 10:07:25 [app.go:103] [I] http server Running on :8080
+2015/05/15 10:07:28 [app.go:103] [I] http server Running on :8080
+2015/05/15 10:07:30 [app.go:103] [I] http server Running on :8080
+2015/05/15 10:07:34 [app.go:103] [I] http server Running on :8080
+2015/05/15 10:07:37 [app.go:103] [I] http server Running on :8080
+2015/05/15 10:07:39 [app.go:103] [I] http server Running on :8080
+2015/05/15 10:07:57 [main.go:25] [D]  
+2015/05/15 10:07:57 [user_app.go:84] [D] ParseRegsiterForm: &{[{100001 889 fe80::713d:36ec:e1ed:f4b 1.0} {100001 889 fe80::713d:36ec:e1ed:f4b 1.0} {100001 889 fe80::713d:36ec:e1ed:f4b 1.0} {100001 889 fe80::713d:36ec:e1ed:f4b 1.0}]} 
+2015/05/15 10:07:57 [router.go:845] [D] | POST       | /v1/user/app_add                         | 1ms              | match      | /v1/user/app_add                         | 
+2015/05/15 11:25:20 [app.go:103] [I] http server Running on :8080
+2015/05/15 11:25:22 [app.go:103] [I] http server Running on :8080
+2015/05/15 11:25:32 [main.go:25] [D]  
+2015/05/15 11:25:32 [user_app.go:83] [D] {100001 889 fe80::713d:36ec:e1ed:f4b 1.0} 
+2015/05/15 11:25:32 [user_app.go:83] [D] {100001 889 fe80::713d:36ec:e1ed:f4b 1.0} 
+2015/05/15 11:25:32 [user_app.go:83] [D] {100001 889 fe80::713d:36ec:e1ed:f4b 1.0} 
+2015/05/15 11:25:32 [user_app.go:83] [D] {100001 889 fe80::713d:36ec:e1ed:f4b 1.0} 
+2015/05/15 11:25:32 [user_app.go:100] [D] ParseRegsiterForm: &{[{100001 889 fe80::713d:36ec:e1ed:f4b 1.0} {100001 889 fe80::713d:36ec:e1ed:f4b 1.0} {100001 889 fe80::713d:36ec:e1ed:f4b 1.0} {100001 889 fe80::713d:36ec:e1ed:f4b 1.0}]} 
+2015/05/15 11:25:32 [router.go:845] [D] | POST       | /v1/user/app_add                         | 2.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 11:26:17 [app.go:103] [I] http server Running on :8080
+2015/05/15 11:26:20 [app.go:103] [I] http server Running on :8080
+2015/05/15 11:27:09 [app.go:103] [I] http server Running on :8080
+2015/05/15 11:27:11 [app.go:103] [I] http server Running on :8080
+2015/05/15 11:27:30 [app.go:103] [I] http server Running on :8080
+2015/05/15 11:27:32 [app.go:103] [I] http server Running on :8080
+2015/05/15 11:28:13 [main.go:25] [D]  
+2015/05/15 11:28:13 [user_app.go:83] [D] &{100001 889 fe80::713d:36ec:e1ed:f4b 1.0} 
+2015/05/15 11:28:13 [user_app.go:83] [D] &{100001 889 fe80::713d:36ec:e1ed:f4b 1.0} 
+2015/05/15 11:28:13 [user_app.go:83] [D] &{100001 889 fe80::713d:36ec:e1ed:f4b 1.0} 
+2015/05/15 11:28:13 [user_app.go:83] [D] &{100001 889 fe80::713d:36ec:e1ed:f4b 1.0} 
+2015/05/15 11:28:13 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 11:40:28 [app.go:103] [I] http server Running on :8080
+2015/05/15 11:40:30 [parser.go:60] [I] D:\golang\src\appcenter\controllers has not changed, not reloading 
+2015/05/15 11:40:30 [app.go:103] [I] http server Running on :8080
+2015/05/15 11:40:45 [main.go:25] [D]  
+2015/05/15 11:40:45 [user_app.go:83] [D] &{100001 889 fe80::713d:36ec:e1ed:f4b 1.0} 
+2015/05/15 11:40:45 [user_app.go:83] [D] &{100001 889 fe80::713d:36ec:e1ed:f4b 1.0} 
+2015/05/15 11:40:45 [user_app.go:83] [D] &{100001 889 fe80::713d:36ec:e1ed:f4b 1.0} 
+2015/05/15 11:40:45 [user_app.go:83] [D] &{100001 889 fe80::713d:36ec:e1ed:f4b 1.0} 
+2015/05/15 11:40:45 [router.go:845] [D] | POST       | /v1/user/app_add                         | 4.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 12:00:05 [app.go:103] [I] http server Running on :8080
+2015/05/15 12:00:07 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:10:13 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:10:17 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:10:39 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:10:49 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:10:59 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:11:07 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:11:30 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:11:35 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:11:38 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:11:40 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:11:48 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:13:16 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:13:35 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:14:56 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:14:58 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:15:20 [parser.go:130] [I] generate router from comments 
+2015/05/15 13:15:20 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:15:22 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:31:46 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:31:58 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:32:21 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:32:27 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:32:49 [main.go:25] [D]  
+2015/05/15 13:32:49 [router.go:845] [D] | POST       | /v1/user/app_add                         | 18.0011ms        | match      | /v1/user/app_add                         | 
+2015/05/15 13:33:31 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:33:35 [main.go:25] [D]  
+2015/05/15 13:33:35 [router.go:845] [D] | POST       | /v1/user/app_add                         | 2.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 13:34:18 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:34:21 [main.go:25] [D]  
+2015/05/15 13:34:21 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 13:34:36 [main.go:25] [D]  
+2015/05/15 13:34:36 [router.go:845] [D] | POST       | /v1/user/app_add                         | 1.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 13:35:34 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:35:36 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:35:43 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:35:45 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:35:51 [main.go:25] [D]  
+2015/05/15 13:35:51 [router.go:845] [D] | POST       | /v1/user/app_add                         | 2.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 13:36:14 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:36:17 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:36:29 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:36:35 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:36:38 [main.go:25] [D]  
+2015/05/15 13:36:38 [user_app.go:78] [D] 这个是什么情况？？？ 
+2015/05/15 13:36:38 [router.go:845] [D] | POST       | /v1/user/app_add                         | 2.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 13:37:09 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:37:11 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:37:14 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:37:15 [main.go:25] [D]  
+2015/05/15 13:37:15 [user_app.go:78] [D] 这个是什么情况？？？ 
+2015/05/15 13:37:15 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 13:37:32 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:37:34 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:37:45 [parser.go:130] [I] generate router from comments 
+2015/05/15 13:37:45 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:37:47 [parser.go:130] [I] generate router from comments 
+2015/05/15 13:37:47 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:37:50 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:37:52 [parser.go:60] [I] D:\golang\src\appcenter\controllers has not changed, not reloading 
+2015/05/15 13:37:52 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:37:52 [main.go:25] [D]  
+2015/05/15 13:37:52 [user_app.go:78] [D] 这个是什么情况？？？ 
+2015/05/15 13:37:52 [user_app.go:83] [D] {100001 889 fe80::713d:36ec:e1ed:f4b 1.0} 
+2015/05/15 13:37:52 [user_app.go:83] [D] {100001 889 fe80::713d:36ec:e1ed:f4b 1.0} 
+2015/05/15 13:37:52 [router.go:845] [D] | POST       | /v1/user/app_add                         | 2.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 13:37:54 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:38:13 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:38:16 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:38:33 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:38:35 [main.go:25] [D]  
+2015/05/15 13:38:35 [user_app.go:78] [D] 这个是什么情况？？？ 
+2015/05/15 13:38:35 [user_app.go:83] [D] {100001 889 fe80::713d:36ec:e1ed:f4b 1.0} 
+2015/05/15 13:38:35 [user_app.go:89] [D] 889 
+2015/05/15 13:38:35 [user_app.go:83] [D] {100001 889 fe80::713d:36ec:e1ed:f4b 1.0} 
+2015/05/15 13:38:35 [router.go:845] [D] | POST       | /v1/user/app_add                         | 2.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 13:38:36 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:38:56 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:38:58 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:39:01 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:39:05 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:39:07 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:39:12 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:39:14 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:39:23 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:39:26 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:39:28 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:39:32 [main.go:25] [D]  
+2015/05/15 13:39:32 [user_app.go:93] [D] 测试数据--- &{889 小王 18939751170  upKey64955358 小王 0 17 1.1 1  Carl江 appMaker网站 0 2014-11-27 15:32:08  0KB http://www.mmd-park.cn/appUpload/upKey64955358  http://www.mmd-park.cn/common/download.php?t=mc&appid=889} 
+2015/05/15 13:39:32 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 13:39:58 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:40:01 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:40:12 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:40:14 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:40:18 [main.go:25] [D]  
+2015/05/15 13:40:18 [user_app.go:98] [D] {100001 889 fe80::713d:36ec:e1ed:f4b 1.1} 
+2015/05/15 13:40:18 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 13:41:00 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:41:03 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:41:05 [parser.go:60] [I] D:\golang\src\appcenter\controllers has not changed, not reloading 
+2015/05/15 13:41:05 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:41:07 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:41:51 [main.go:25] [D]  
+2015/05/15 13:41:51 [router.go:845] [D] | POST       | /v1/user/app_add                         | 2.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 13:42:38 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:42:40 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:42:41 [main.go:25] [D]  
+2015/05/15 13:42:41 [router.go:845] [D] | POST       | /v1/user/app_add                         | 1ms              | match      | /v1/user/app_add                         | 
+2015/05/15 13:43:13 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:43:14 [main.go:25] [D]  
+2015/05/15 13:43:14 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 13:43:15 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:43:34 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:43:37 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:43:59 [main.go:25] [D]  
+2015/05/15 13:43:59 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 13:44:01 [main.go:25] [D]  
+2015/05/15 13:44:01 [router.go:845] [D] | POST       | /v1/user/app_add                         | 1.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 13:44:40 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:44:42 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:48:09 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:48:12 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:49:11 [main.go:25] [D]  
+2015/05/15 13:49:11 [router.go:845] [D] | POST       | /v1/user/app_add                         | 2.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 13:49:59 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:50:01 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:50:03 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:50:06 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:50:10 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:50:12 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:50:15 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:50:17 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:50:18 [main.go:25] [D]  
+2015/05/15 13:50:18 [user_app.go:105] [D] [{100001 889 fe80::713d:36ec:e1ed:f4b 1.1}] 
+2015/05/15 13:50:18 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 13:56:41 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:56:43 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:57:04 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:57:07 [app.go:103] [I] http server Running on :8080
+2015/05/15 13:57:08 [main.go:25] [D]  
+2015/05/15 13:57:08 [user_app.go:106] [D] {1009 提交数据中存在重复的数据,添加失败} 
+2015/05/15 13:57:08 [user_app.go:107] [D] ParseRegsiterForm: &{[{100001 889 fe80::713d:36ec:e1ed:f4b 1.0} {100001 889 fe80::713d:36ec:e1ed:f4b 1.0} {100001 889 fe80::713d:36ec:e1ed:f4b 1.0} {100001 889 fe80::713d:36ec:e1ed:f4b 1.0}]} 
+2015/05/15 13:57:08 [router.go:845] [D] | POST       | /v1/user/app_add                         | 4.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 13:57:38 [main.go:25] [D]  
+2015/05/15 13:57:38 [router.go:871] [C] the request url is  /v1/user/app_add 
+2015/05/15 13:57:38 [router.go:872] [C] Handler crashed with error wrong object type `**app_upload.AppUpload` for rows scan, need *appcenter/models/app_upload.AppUpload 
+2015/05/15 13:57:38 [router.go:878] [C] c:/go/src/runtime/asm_386.s:412 
+2015/05/15 13:57:38 [router.go:878] [C] c:/go/src/runtime/panic.go:387 
+2015/05/15 13:57:38 [router.go:878] [C] D:/golang/src/github.com/astaxie/beego/orm/db.go:753 
+2015/05/15 13:57:38 [router.go:878] [C] D:/golang/src/github.com/astaxie/beego/orm/orm_queryset.go:182 
+2015/05/15 13:57:38 [router.go:878] [C] D:/golang/src/appcenter/models/app_upload/app_upload.go:79 
+2015/05/15 13:57:38 [router.go:878] [C] D:/golang/src/appcenter/controllers/user_app.go:97 
+2015/05/15 13:57:38 [router.go:878] [C] c:/go/src/runtime/asm_386.s:412 
+2015/05/15 13:57:38 [router.go:878] [C] c:/go/src/reflect/value.go:419 
+2015/05/15 13:57:38 [router.go:878] [C] c:/go/src/reflect/value.go:296 
+2015/05/15 13:57:38 [router.go:878] [C] D:/golang/src/github.com/astaxie/beego/router.go:794 
+2015/05/15 13:57:38 [router.go:878] [C] c:/go/src/net/http/server.go:1703 
+2015/05/15 13:57:38 [router.go:878] [C] c:/go/src/net/http/server.go:1204 
+2015/05/15 13:57:38 [router.go:878] [C] c:/go/src/runtime/asm_386.s:2287 
+2015/05/15 13:58:00 [main.go:25] [D]  
+2015/05/15 13:58:00 [router.go:871] [C] the request url is  /v1/user/app_add 
+2015/05/15 13:58:00 [router.go:872] [C] Handler crashed with error wrong object type `**app_upload.AppUpload` for rows scan, need *appcenter/models/app_upload.AppUpload 
+2015/05/15 13:58:00 [router.go:878] [C] c:/go/src/runtime/asm_386.s:412 
+2015/05/15 13:58:00 [router.go:878] [C] c:/go/src/runtime/panic.go:387 
+2015/05/15 13:58:00 [router.go:878] [C] D:/golang/src/github.com/astaxie/beego/orm/db.go:753 
+2015/05/15 13:58:00 [router.go:878] [C] D:/golang/src/github.com/astaxie/beego/orm/orm_queryset.go:182 
+2015/05/15 13:58:00 [router.go:878] [C] D:/golang/src/appcenter/models/app_upload/app_upload.go:79 
+2015/05/15 13:58:00 [router.go:878] [C] D:/golang/src/appcenter/controllers/user_app.go:97 
+2015/05/15 13:58:00 [router.go:878] [C] c:/go/src/runtime/asm_386.s:412 
+2015/05/15 13:58:00 [router.go:878] [C] c:/go/src/reflect/value.go:419 
+2015/05/15 13:58:00 [router.go:878] [C] c:/go/src/reflect/value.go:296 
+2015/05/15 13:58:00 [router.go:878] [C] D:/golang/src/github.com/astaxie/beego/router.go:794 
+2015/05/15 13:58:00 [router.go:878] [C] c:/go/src/net/http/server.go:1703 
+2015/05/15 13:58:00 [router.go:878] [C] c:/go/src/net/http/server.go:1204 
+2015/05/15 13:58:00 [router.go:878] [C] c:/go/src/runtime/asm_386.s:2287 
+2015/05/15 13:58:05 [main.go:25] [D]  
+2015/05/15 13:58:05 [user_app.go:106] [D] {1009 提交数据中存在重复的数据,添加失败} 
+2015/05/15 13:58:05 [user_app.go:107] [D] ParseRegsiterForm: &{[{100001 889 fe80::713d:36ec:e1ed:f4b 1.0} {100001 889 fe80::713d:36ec:e1ed:f4b 1.0} {100001 889 fe80::713d:36ec:e1ed:f4b 1.0} {100001 889 fe80::713d:36ec:e1ed:f4b 1.0}]} 
+2015/05/15 13:58:05 [router.go:845] [D] | POST       | /v1/user/app_add                         | 0                | match      | /v1/user/app_add                         | 
+2015/05/15 13:59:34 [main.go:25] [D]  
+2015/05/15 13:59:34 [user_app.go:106] [D] {1009 提交数据中存在重复的数据,添加失败} 
+2015/05/15 13:59:34 [user_app.go:107] [D] ParseRegsiterForm: &{[{100001 889 fe80::713d:36ec:e1ed:f4b } {100001 889 fe80::713d:36ec:e1ed:f4b } {100001 889 fe80::713d:36ec:e1ed:f4b } {100001 889 fe80::713d:36ec:e1ed:f4b }]} 
+2015/05/15 13:59:34 [router.go:845] [D] | POST       | /v1/user/app_add                         | 1.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:02:28 [main.go:25] [D]  
+2015/05/15 14:02:28 [router.go:871] [C] the request url is  /v1/user/app_add 
+2015/05/15 14:02:28 [router.go:872] [C] Handler crashed with error wrong object type `**app_upload.AppUpload` for rows scan, need *appcenter/models/app_upload.AppUpload 
+2015/05/15 14:02:28 [router.go:878] [C] c:/go/src/runtime/asm_386.s:412 
+2015/05/15 14:02:28 [router.go:878] [C] c:/go/src/runtime/panic.go:387 
+2015/05/15 14:02:28 [router.go:878] [C] D:/golang/src/github.com/astaxie/beego/orm/db.go:753 
+2015/05/15 14:02:28 [router.go:878] [C] D:/golang/src/github.com/astaxie/beego/orm/orm_queryset.go:182 
+2015/05/15 14:02:28 [router.go:878] [C] D:/golang/src/appcenter/models/app_upload/app_upload.go:79 
+2015/05/15 14:02:28 [router.go:878] [C] D:/golang/src/appcenter/controllers/user_app.go:97 
+2015/05/15 14:02:28 [router.go:878] [C] c:/go/src/runtime/asm_386.s:412 
+2015/05/15 14:02:28 [router.go:878] [C] c:/go/src/reflect/value.go:419 
+2015/05/15 14:02:28 [router.go:878] [C] c:/go/src/reflect/value.go:296 
+2015/05/15 14:02:28 [router.go:878] [C] D:/golang/src/github.com/astaxie/beego/router.go:794 
+2015/05/15 14:02:28 [router.go:878] [C] c:/go/src/net/http/server.go:1703 
+2015/05/15 14:02:28 [router.go:878] [C] c:/go/src/net/http/server.go:1204 
+2015/05/15 14:02:28 [router.go:878] [C] c:/go/src/runtime/asm_386.s:2287 
+2015/05/15 14:06:00 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:06:02 [parser.go:60] [I] D:\golang\src\appcenter\controllers has not changed, not reloading 
+2015/05/15 14:06:02 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:06:05 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:06:29 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:06:29 [main.go:25] [D]  
+2015/05/15 14:06:29 [router.go:871] [C] the request url is  /v1/user/app_add 
+2015/05/15 14:06:29 [router.go:872] [C] Handler crashed with error reflect: call of reflect.Value.Type on zero Value 
+2015/05/15 14:06:29 [router.go:878] [C] c:/go/src/runtime/asm_386.s:412 
+2015/05/15 14:06:29 [router.go:878] [C] c:/go/src/runtime/panic.go:387 
+2015/05/15 14:06:29 [router.go:878] [C] c:/go/src/reflect/value.go:1633 
+2015/05/15 14:06:29 [router.go:878] [C] D:/golang/src/github.com/astaxie/beego/orm/db.go:746 
+2015/05/15 14:06:29 [router.go:878] [C] D:/golang/src/github.com/astaxie/beego/orm/orm_queryset.go:182 
+2015/05/15 14:06:29 [router.go:878] [C] D:/golang/src/appcenter/models/app_upload/app_upload.go:79 
+2015/05/15 14:06:29 [router.go:878] [C] D:/golang/src/appcenter/controllers/user_app.go:98 
+2015/05/15 14:06:29 [router.go:878] [C] c:/go/src/runtime/asm_386.s:412 
+2015/05/15 14:06:29 [router.go:878] [C] c:/go/src/reflect/value.go:419 
+2015/05/15 14:06:29 [router.go:878] [C] c:/go/src/reflect/value.go:296 
+2015/05/15 14:06:29 [router.go:878] [C] D:/golang/src/github.com/astaxie/beego/router.go:794 
+2015/05/15 14:06:29 [router.go:878] [C] c:/go/src/net/http/server.go:1703 
+2015/05/15 14:06:29 [router.go:878] [C] c:/go/src/net/http/server.go:1204 
+2015/05/15 14:06:29 [router.go:878] [C] c:/go/src/runtime/asm_386.s:2287 
+2015/05/15 14:07:11 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:07:39 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:07:42 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:07:45 [main.go:25] [D]  
+2015/05/15 14:07:45 [router.go:871] [C] the request url is  /v1/user/app_add 
+2015/05/15 14:07:45 [router.go:872] [C] Handler crashed with error wrong object type `**app_upload.AppUpload` for rows scan, need *appcenter/models/app_upload.AppUpload 
+2015/05/15 14:07:45 [router.go:878] [C] c:/go/src/runtime/asm_386.s:412 
+2015/05/15 14:07:45 [router.go:878] [C] c:/go/src/runtime/panic.go:387 
+2015/05/15 14:07:45 [router.go:878] [C] D:/golang/src/github.com/astaxie/beego/orm/db.go:753 
+2015/05/15 14:07:45 [router.go:878] [C] D:/golang/src/github.com/astaxie/beego/orm/orm_queryset.go:182 
+2015/05/15 14:07:45 [router.go:878] [C] D:/golang/src/appcenter/models/app_upload/app_upload.go:79 
+2015/05/15 14:07:45 [router.go:878] [C] D:/golang/src/appcenter/controllers/user_app.go:98 
+2015/05/15 14:07:45 [router.go:878] [C] c:/go/src/runtime/asm_386.s:412 
+2015/05/15 14:07:45 [router.go:878] [C] c:/go/src/reflect/value.go:419 
+2015/05/15 14:07:45 [router.go:878] [C] c:/go/src/reflect/value.go:296 
+2015/05/15 14:07:45 [router.go:878] [C] D:/golang/src/github.com/astaxie/beego/router.go:794 
+2015/05/15 14:07:45 [router.go:878] [C] c:/go/src/net/http/server.go:1703 
+2015/05/15 14:07:45 [router.go:878] [C] c:/go/src/net/http/server.go:1204 
+2015/05/15 14:07:45 [router.go:878] [C] c:/go/src/runtime/asm_386.s:2287 
+2015/05/15 14:08:21 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:08:34 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:08:36 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:08:37 [main.go:25] [D]  
+2015/05/15 14:08:37 [user_app.go:107] [D] {1008 用户App信息不存在,更新失败} 
+2015/05/15 14:08:37 [user_app.go:108] [D] ParseRegsiterForm: &{[{100001 670 fe80::713d:36ec:e1ed:f4b } {100001 671 fe80::713d:36ec:e1ed:f4b } {100001 673 fe80::713d:36ec:e1ed:f4b } {100001 677 fe80::713d:36ec:e1ed:f4b }]} 
+2015/05/15 14:08:37 [router.go:845] [D] | POST       | /v1/user/app_add                         | 4.0003ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:09:04 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:09:06 [main.go:25] [D]  
+2015/05/15 14:09:06 [user_app.go:107] [D] {0 } 
+2015/05/15 14:09:06 [user_app.go:108] [D] ParseRegsiterForm: &{[{100001 670 fe80::713d:36ec:e1ed:f4b } {100001 671 fe80::713d:36ec:e1ed:f4b } {100001 673 fe80::713d:36ec:e1ed:f4b } {100001 677 fe80::713d:36ec:e1ed:f4b }]} 
+2015/05/15 14:09:06 [router.go:845] [D] | POST       | /v1/user/app_add                         | 12.0007ms        | match      | /v1/user/app_add                         | 
+2015/05/15 14:09:06 [main.go:25] [D]  
+2015/05/15 14:09:06 [user_app.go:107] [D] {0 } 
+2015/05/15 14:09:06 [user_app.go:108] [D] ParseRegsiterForm: &{[{100001 670 fe80::713d:36ec:e1ed:f4b } {100001 671 fe80::713d:36ec:e1ed:f4b } {100001 673 fe80::713d:36ec:e1ed:f4b } {100001 677 fe80::713d:36ec:e1ed:f4b }]} 
+2015/05/15 14:09:06 [router.go:845] [D] | POST       | /v1/user/app_add                         | 9.0005ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:09:07 [main.go:25] [D]  
+2015/05/15 14:09:07 [user_app.go:107] [D] {0 } 
+2015/05/15 14:09:07 [user_app.go:108] [D] ParseRegsiterForm: &{[{100001 670 fe80::713d:36ec:e1ed:f4b } {100001 671 fe80::713d:36ec:e1ed:f4b } {100001 673 fe80::713d:36ec:e1ed:f4b } {100001 677 fe80::713d:36ec:e1ed:f4b }]} 
+2015/05/15 14:09:07 [router.go:845] [D] | POST       | /v1/user/app_add                         | 9.0005ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:09:47 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:09:49 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:09:52 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:09:56 [main.go:25] [D]  
+2015/05/15 14:09:56 [user_app.go:107] [D] {1009 提交数据中存在重复的数据,添加失败} 
+2015/05/15 14:09:56 [user_app.go:108] [D] ParseRegsiterForm: &{[{100001 670 fe80::713d:36ec:e1ed:f4b } {100001 671 fe80::713d:36ec:e1ed:f4b } {100001 671 fe80::713d:36ec:e1ed:f4b } {100001 677 fe80::713d:36ec:e1ed:f4b }]} 
+2015/05/15 14:09:56 [router.go:845] [D] | POST       | /v1/user/app_add                         | 9.0005ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:09:58 [main.go:25] [D]  
+2015/05/15 14:09:58 [user_app.go:107] [D] {1009 提交数据中存在重复的数据,添加失败} 
+2015/05/15 14:09:58 [user_app.go:108] [D] ParseRegsiterForm: &{[{100001 670 fe80::713d:36ec:e1ed:f4b } {100001 671 fe80::713d:36ec:e1ed:f4b } {100001 671 fe80::713d:36ec:e1ed:f4b } {100001 677 fe80::713d:36ec:e1ed:f4b }]} 
+2015/05/15 14:09:58 [router.go:845] [D] | POST       | /v1/user/app_add                         | 4.0003ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:11:03 [main.go:25] [D]  
+2015/05/15 14:11:03 [user_app.go:107] [D] {0 } 
+2015/05/15 14:11:03 [user_app.go:108] [D] ParseRegsiterForm: &{[{100001 670 fe80::713d:36ec:e1ed:f4b } {100001 671 fe80::713d:36ec:e1ed:f4b } {100001 673 fe80::713d:36ec:e1ed:f4b } {100001 677 fe80::713d:36ec:e1ed:f4b }]} 
+2015/05/15 14:11:03 [router.go:845] [D] | POST       | /v1/user/app_add                         | 10.0006ms        | match      | /v1/user/app_add                         | 
+2015/05/15 14:11:38 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:11:40 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:11:43 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:11:46 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:11:55 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:11:57 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:12:00 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:12:03 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:12:05 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:12:09 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:12:11 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:12:17 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:12:19 [main.go:25] [D]  
+2015/05/15 14:12:19 [router.go:845] [D] | POST       | /v1/user/app_add                         | 32.0018ms        | match      | /v1/user/app_add                         | 
+2015/05/15 14:12:20 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:12:22 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:12:24 [main.go:25] [D]  
+2015/05/15 14:12:24 [router.go:845] [D] | POST       | /v1/user/app_add                         | 7.0004ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:12:31 [main.go:25] [D]  
+2015/05/15 14:12:31 [router.go:845] [D] | POST       | /v1/user/app_add                         | 9.0006ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:12:59 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:13:02 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:13:03 [main.go:25] [D]  
+2015/05/15 14:13:03 [user_app.go:99] [D] 每次都有信息 
+2015/05/15 14:13:03 [user_app.go:99] [D] 每次都有信息 
+2015/05/15 14:13:03 [user_app.go:99] [D] 每次都有信息 
+2015/05/15 14:13:03 [user_app.go:99] [D] 每次都有信息 
+2015/05/15 14:13:03 [router.go:845] [D] | POST       | /v1/user/app_add                         | 35.002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:13:04 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:14:46 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:14:49 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:14:54 [main.go:25] [D]  
+2015/05/15 14:14:54 [app_upload.go:78] [D] 缓存中的数据  <nil> 
+2015/05/15 14:14:54 [user_app.go:99] [D] 每次都有信息... &{0      0 0            } 
+2015/05/15 14:14:54 [app_upload.go:78] [D] 缓存中的数据  <nil> 
+2015/05/15 14:14:54 [user_app.go:99] [D] 每次都有信息... &{0      0 0            } 
+2015/05/15 14:14:54 [app_upload.go:78] [D] 缓存中的数据  <nil> 
+2015/05/15 14:14:54 [user_app.go:99] [D] 每次都有信息... &{0      0 0            } 
+2015/05/15 14:14:54 [app_upload.go:78] [D] 缓存中的数据  <nil> 
+2015/05/15 14:14:54 [user_app.go:99] [D] 每次都有信息... &{0      0 0            } 
+2015/05/15 14:14:54 [router.go:845] [D] | POST       | /v1/user/app_add                         | 11.0006ms        | match      | /v1/user/app_add                         | 
+2015/05/15 14:15:35 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:15:43 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:15:51 [main.go:25] [D]  
+2015/05/15 14:15:51 [app_upload.go:78] [D] 缓存中的数据  <nil> 
+2015/05/15 14:15:51 [app_upload.go:83] [D] 数据库中的数据  &{0      0 0            } 
+2015/05/15 14:15:51 [user_app.go:99] [D] 每次都有信息... &{0      0 0            } 
+2015/05/15 14:15:51 [app_upload.go:78] [D] 缓存中的数据  <nil> 
+2015/05/15 14:15:51 [app_upload.go:83] [D] 数据库中的数据  &{0      0 0            } 
+2015/05/15 14:15:51 [user_app.go:99] [D] 每次都有信息... &{0      0 0            } 
+2015/05/15 14:15:51 [app_upload.go:78] [D] 缓存中的数据  <nil> 
+2015/05/15 14:15:51 [app_upload.go:83] [D] 数据库中的数据  &{0      0 0            } 
+2015/05/15 14:15:51 [user_app.go:99] [D] 每次都有信息... &{0      0 0            } 
+2015/05/15 14:15:51 [app_upload.go:78] [D] 缓存中的数据  <nil> 
+2015/05/15 14:15:51 [app_upload.go:83] [D] 数据库中的数据  &{0      0 0            } 
+2015/05/15 14:15:51 [user_app.go:99] [D] 每次都有信息... &{0      0 0            } 
+2015/05/15 14:15:51 [router.go:845] [D] | POST       | /v1/user/app_add                         | 11.0006ms        | match      | /v1/user/app_add                         | 
+2015/05/15 14:16:48 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:16:52 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:16:55 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:16:57 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:17:01 [main.go:25] [D]  
+2015/05/15 14:17:01 [app_upload.go:78] [D] 缓存中的数据  <nil> 
+2015/05/15 14:17:01 [app_upload.go:85] [D] 数据库中的数据 <nil> 
+2015/05/15 14:17:01 [user_app.go:99] [D] 每次都有信息... <nil> 
+2015/05/15 14:17:01 [router.go:845] [D] | POST       | /v1/user/app_add                         | 5.0003ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:20:52 [index.go:24] [D] false 
+2015/05/15 14:20:52 [router.go:845] [D] | GET        | /                                        | 15.0009ms        | match      | /                                        | 
+2015/05/15 14:20:53 [router.go:845] [D] | GET        | /img/search_clear.png                    | 1ms              | notmatch   | 
+2015/05/15 14:20:53 [router.go:845] [D] | GET        | /img/search_down.png                     | 1.0001ms         | notmatch   | 
+2015/05/15 14:21:37 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:21:42 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:21:45 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:22:01 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:22:03 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:22:07 [main.go:25] [D]  
+2015/05/15 14:22:07 [router.go:845] [D] | POST       | /v1/user/app_add                         | 6.0003ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:22:07 [main.go:25] [D]  
+2015/05/15 14:22:07 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:22:30 [main.go:25] [D]  
+2015/05/15 14:22:30 [router.go:845] [D] | POST       | /v1/user/app_add                         | 4.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:22:31 [main.go:25] [D]  
+2015/05/15 14:22:31 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:22:31 [main.go:25] [D]  
+2015/05/15 14:22:31 [router.go:845] [D] | POST       | /v1/user/app_add                         | 4.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:22:32 [main.go:25] [D]  
+2015/05/15 14:22:32 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:22:32 [main.go:25] [D]  
+2015/05/15 14:22:32 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:22:32 [main.go:25] [D]  
+2015/05/15 14:22:32 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:22:32 [main.go:25] [D]  
+2015/05/15 14:22:32 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:22:58 [main.go:25] [D]  
+2015/05/15 14:22:58 [router.go:845] [D] | POST       | /v1/user/app_add                         | 5.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:22:59 [main.go:25] [D]  
+2015/05/15 14:22:59 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:22:59 [main.go:25] [D]  
+2015/05/15 14:22:59 [router.go:845] [D] | POST       | /v1/user/app_add                         | 2.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:22:59 [main.go:25] [D]  
+2015/05/15 14:22:59 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:22:59 [main.go:25] [D]  
+2015/05/15 14:22:59 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:23:00 [main.go:25] [D]  
+2015/05/15 14:23:00 [router.go:845] [D] | POST       | /v1/user/app_add                         | 2.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:23:18 [main.go:25] [D]  
+2015/05/15 14:23:18 [router.go:845] [D] | POST       | /v1/user/app_add                         | 7.0004ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:23:19 [main.go:25] [D]  
+2015/05/15 14:23:19 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:23:19 [main.go:25] [D]  
+2015/05/15 14:23:19 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:23:19 [main.go:25] [D]  
+2015/05/15 14:23:19 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:23:19 [main.go:25] [D]  
+2015/05/15 14:23:19 [router.go:845] [D] | POST       | /v1/user/app_add                         | 4.0003ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:23:20 [main.go:25] [D]  
+2015/05/15 14:23:20 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:23:20 [main.go:25] [D]  
+2015/05/15 14:23:20 [router.go:845] [D] | POST       | /v1/user/app_add                         | 4.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:23:20 [main.go:25] [D]  
+2015/05/15 14:23:20 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:23:20 [main.go:25] [D]  
+2015/05/15 14:23:20 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:23:20 [main.go:25] [D]  
+2015/05/15 14:23:20 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:23:21 [main.go:25] [D]  
+2015/05/15 14:23:21 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:23:21 [main.go:25] [D]  
+2015/05/15 14:23:21 [router.go:845] [D] | POST       | /v1/user/app_add                         | 4.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:23:21 [main.go:25] [D]  
+2015/05/15 14:23:21 [router.go:845] [D] | POST       | /v1/user/app_add                         | 4.0003ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:23:21 [main.go:25] [D]  
+2015/05/15 14:23:21 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:23:21 [main.go:25] [D]  
+2015/05/15 14:23:21 [router.go:845] [D] | POST       | /v1/user/app_add                         | 2.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:23:43 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:23:59 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:24:09 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:24:15 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:24:22 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:24:23 [main.go:25] [D]  
+2015/05/15 14:24:23 [app_upload.go:82] [D] 取出的值 670 ====> {0      0 0            } 
+2015/05/15 14:24:23 [router.go:845] [D] | POST       | /v1/user/app_add                         | 4.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:24:46 [main.go:25] [D]  
+2015/05/15 14:24:46 [router.go:845] [D] | POST       | /v1/user/app_add                         | 1.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:24:54 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:25:03 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:25:05 [parser.go:60] [I] D:\golang\src\appcenter\controllers has not changed, not reloading 
+2015/05/15 14:25:06 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:25:08 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:25:26 [main.go:25] [D]  
+2015/05/15 14:25:26 [router.go:845] [D] | POST       | /v1/user/app_add                         | 2.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:33:01 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:33:03 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:33:40 [main.go:25] [D]  
+2015/05/15 14:33:40 [router.go:845] [D] | POST       | /v1/user/app_add                         | 107.0061ms       | match      | /v1/user/app_add                         | 
+2015/05/15 14:38:46 [main.go:25] [D]  
+2015/05/15 14:38:46 [router.go:845] [D] | POST       | /v1/user/app_add                         | 5.0003ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:38:48 [main.go:25] [D]  
+2015/05/15 14:38:48 [router.go:845] [D] | POST       | /v1/user/app_add                         | 1ms              | match      | /v1/user/app_add                         | 
+2015/05/15 14:39:49 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:39:52 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:46:49 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:46:52 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:48:13 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:48:15 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:52:11 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:52:13 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:53:10 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:53:12 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:53:17 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:53:19 [app.go:103] [I] http server Running on :8080
+2015/05/15 14:55:33 [main.go:25] [D]  
+2015/05/15 14:55:33 [router.go:845] [D] | POST       | /v1/user/app_update                      | 5.0003ms         | match      | /v1/user/app_update                      | 
+2015/05/15 14:55:37 [main.go:25] [D]  
+2015/05/15 14:55:37 [router.go:845] [D] | POST       | /v1/user/app_update                      | 4.0002ms         | match      | /v1/user/app_update                      | 
+2015/05/15 14:55:37 [main.go:25] [D]  
+2015/05/15 14:55:37 [router.go:845] [D] | POST       | /v1/user/app_update                      | 4.0002ms         | match      | /v1/user/app_update                      | 
+2015/05/15 14:55:38 [main.go:25] [D]  
+2015/05/15 14:55:38 [router.go:845] [D] | POST       | /v1/user/app_update                      | 3.0002ms         | match      | /v1/user/app_update                      | 
+2015/05/15 14:56:15 [main.go:25] [D]  
+2015/05/15 14:56:15 [router.go:845] [D] | POST       | /v1/user/app_update                      | 1ms              | match      | /v1/user/app_update                      | 
+2015/05/15 14:56:19 [main.go:25] [D]  
+2015/05/15 14:56:19 [router.go:845] [D] | POST       | /v1/user/app_add                         | 4.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:56:28 [main.go:25] [D]  
+2015/05/15 14:56:28 [router.go:845] [D] | POST       | /v1/user/app_update                      | 4.0002ms         | match      | /v1/user/app_update                      | 
+2015/05/15 14:56:31 [main.go:25] [D]  
+2015/05/15 14:56:31 [router.go:845] [D] | POST       | /v1/user/app_add                         | 3.0001ms         | match      | /v1/user/app_add                         | 
+2015/05/15 14:56:34 [main.go:25] [D]  
+2015/05/15 14:56:34 [router.go:845] [D] | POST       | /v1/user/app_update                      | 4.0002ms         | match      | /v1/user/app_update                      | 
+2015/05/15 15:00:51 [main.go:25] [D]  
+2015/05/15 15:00:51 [user_app.go:273] [D] ParseRegsiterForm: &{ 0  } 
+2015/05/15 15:00:51 [user_app.go:284] [D] ValidRegsiterForm errors: 
+2015/05/15 15:00:51 [user_app.go:286] [D] UserId.Required Can not be empty 
+2015/05/15 15:00:51 [user_app.go:286] [D] Udid.Required Can not be empty 
+2015/05/15 15:00:51 [router.go:845] [D] | POST       | /v1/user/app_del                         | 1ms              | match      | /v1/user/app_del                         | 
+2015/05/15 15:00:53 [main.go:25] [D]  
+2015/05/15 15:00:53 [user_app.go:273] [D] ParseRegsiterForm: &{ 0  } 
+2015/05/15 15:00:53 [user_app.go:284] [D] ValidRegsiterForm errors: 
+2015/05/15 15:00:53 [user_app.go:286] [D] UserId.Required Can not be empty 
+2015/05/15 15:00:53 [user_app.go:286] [D] Udid.Required Can not be empty 
+2015/05/15 15:00:53 [router.go:845] [D] | POST       | /v1/user/app_del                         | 0                | match      | /v1/user/app_del                         | 
+2015/05/15 15:01:05 [main.go:25] [D]  
+2015/05/15 15:01:05 [user_app.go:273] [D] ParseRegsiterForm: &{ 0  } 
+2015/05/15 15:01:05 [user_app.go:284] [D] ValidRegsiterForm errors: 
+2015/05/15 15:01:05 [user_app.go:286] [D] UserId.Required Can not be empty 
+2015/05/15 15:01:05 [user_app.go:286] [D] Udid.Required Can not be empty 
+2015/05/15 15:01:05 [router.go:845] [D] | POST       | /v1/user/app_del                         | 0                | match      | /v1/user/app_del                         | 
+2015/05/15 15:01:08 [main.go:25] [D]  
+2015/05/15 15:01:08 [user_app.go:273] [D] ParseRegsiterForm: &{ 0  } 
+2015/05/15 15:01:08 [user_app.go:284] [D] ValidRegsiterForm errors: 
+2015/05/15 15:01:08 [user_app.go:286] [D] UserId.Required Can not be empty 
+2015/05/15 15:01:08 [user_app.go:286] [D] Udid.Required Can not be empty 
+2015/05/15 15:01:08 [router.go:845] [D] | POST       | /v1/user/app_del                         | 1.0001ms         | match      | /v1/user/app_del                         | 
+2015/05/15 15:01:08 [main.go:25] [D]  
+2015/05/15 15:01:08 [user_app.go:273] [D] ParseRegsiterForm: &{ 0  } 
+2015/05/15 15:01:08 [user_app.go:284] [D] ValidRegsiterForm errors: 
+2015/05/15 15:01:08 [user_app.go:286] [D] UserId.Required Can not be empty 
+2015/05/15 15:01:08 [user_app.go:286] [D] Udid.Required Can not be empty 
+2015/05/15 15:01:08 [router.go:845] [D] | POST       | /v1/user/app_del                         | 0                | match      | /v1/user/app_del                         | 
+2015/05/15 15:01:08 [main.go:25] [D]  
+2015/05/15 15:01:08 [user_app.go:273] [D] ParseRegsiterForm: &{ 0  } 
+2015/05/15 15:01:08 [user_app.go:284] [D] ValidRegsiterForm errors: 
+2015/05/15 15:01:08 [user_app.go:286] [D] UserId.Required Can not be empty 
+2015/05/15 15:01:08 [user_app.go:286] [D] Udid.Required Can not be empty 
+2015/05/15 15:01:08 [router.go:845] [D] | POST       | /v1/user/app_del                         | 0                | match      | /v1/user/app_del                         | 
+2015/05/15 15:01:19 [main.go:25] [D]  
+2015/05/15 15:01:19 [router.go:845] [D] | POST       | /v1/user/app_update                      | 4.0002ms         | match      | /v1/user/app_update                      | 
+2015/05/15 15:01:21 [main.go:25] [D]  
+2015/05/15 15:01:21 [user_app.go:273] [D] ParseRegsiterForm: &{ 0  } 
+2015/05/15 15:01:21 [user_app.go:284] [D] ValidRegsiterForm errors: 
+2015/05/15 15:01:21 [user_app.go:286] [D] UserId.Required Can not be empty 
+2015/05/15 15:01:21 [user_app.go:286] [D] Udid.Required Can not be empty 
+2015/05/15 15:01:21 [router.go:845] [D] | POST       | /v1/user/app_del                         | 0                | match      | /v1/user/app_del                         | 
+2015/05/15 15:06:02 [app.go:103] [I] http server Running on :8080
+2015/05/15 15:06:04 [app.go:103] [I] http server Running on :8080
+2015/05/15 15:07:18 [app.go:103] [I] http server Running on :8080
+2015/05/15 15:07:35 [main.go:25] [D]  
+2015/05/15 15:07:35 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:07:35 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:07:35 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:07:35 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:07:35 [router.go:845] [D] | POST       | /v1/user/app_del                         | 35.002ms         | match      | /v1/user/app_del                         | 
+2015/05/15 15:07:36 [main.go:25] [D]  
+2015/05/15 15:07:36 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:07:36 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:07:36 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:07:36 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:07:36 [router.go:845] [D] | POST       | /v1/user/app_del                         | 4.0002ms         | match      | /v1/user/app_del                         | 
+2015/05/15 15:07:37 [main.go:25] [D]  
+2015/05/15 15:07:37 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:07:37 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:07:37 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:07:37 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:07:37 [router.go:845] [D] | POST       | /v1/user/app_del                         | 5.0002ms         | match      | /v1/user/app_del                         | 
+2015/05/15 15:07:37 [main.go:25] [D]  
+2015/05/15 15:07:37 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:07:37 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:07:37 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:07:37 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:07:37 [router.go:845] [D] | POST       | /v1/user/app_del                         | 4.0002ms         | match      | /v1/user/app_del                         | 
+2015/05/15 15:07:50 [main.go:25] [D]  
+2015/05/15 15:07:50 [router.go:845] [D] | POST       | /v1/user/app_update                      | 2.0001ms         | match      | /v1/user/app_update                      | 
+2015/05/15 15:07:51 [main.go:25] [D]  
+2015/05/15 15:07:51 [router.go:845] [D] | POST       | /v1/user/app_update                      | 1ms              | match      | /v1/user/app_update                      | 
+2015/05/15 15:08:01 [main.go:25] [D]  
+2015/05/15 15:08:01 [router.go:845] [D] | POST       | /v1/user/app_add                         | 4.0003ms         | match      | /v1/user/app_add                         | 
+2015/05/15 15:08:35 [main.go:25] [D]  
+2015/05/15 15:08:35 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:08:35 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:08:35 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:08:35 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:08:35 [router.go:845] [D] | POST       | /v1/user/app_del                         | 5.0003ms         | match      | /v1/user/app_del                         | 
+2015/05/15 15:08:38 [main.go:25] [D]  
+2015/05/15 15:08:38 [router.go:845] [D] | POST       | /v1/user/app_update                      | 1.0001ms         | match      | /v1/user/app_update                      | 
+2015/05/15 15:08:40 [main.go:25] [D]  
+2015/05/15 15:08:40 [router.go:845] [D] | POST       | /v1/user/app_update                      | 1ms              | match      | /v1/user/app_update                      | 
+2015/05/15 15:08:43 [main.go:25] [D]  
+2015/05/15 15:08:43 [router.go:845] [D] | POST       | /v1/user/app_add                         | 4.0002ms         | match      | /v1/user/app_add                         | 
+2015/05/15 15:08:46 [main.go:25] [D]  
+2015/05/15 15:08:46 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:08:46 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:08:46 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:08:46 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:08:46 [router.go:845] [D] | POST       | /v1/user/app_update                      | 70.004ms         | match      | /v1/user/app_update                      | 
+2015/05/15 15:08:48 [main.go:25] [D]  
+2015/05/15 15:08:48 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:08:48 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:08:48 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:08:48 [user_app.go:131] [D] 删除 了吗? 
+2015/05/15 15:08:48 [router.go:845] [D] | POST       | /v1/user/app_del                         | 4.0003ms         | match      | /v1/user/app_del                         | 
+2015/05/15 15:09:10 [app.go:103] [I] http server Running on :8080
+2015/05/15 15:09:12 [app.go:103] [I] http server Running on :8080
+2015/05/15 15:09:27 [index.go:58] [D] false 
+2015/05/15 15:09:27 [router.go:845] [D] | GET        | /show/888                                | 9.0005ms         | match      | /show/:id                                | 
+2015/05/15 15:09:27 [router.go:845] [D] | GET        | /show/css/Mstyle.css                     | 2.0001ms         | notmatch   | 

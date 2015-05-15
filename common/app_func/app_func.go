@@ -28,7 +28,7 @@ func GetUploadPath(t string, appkey string) (url string) {
 	url_path := beego.AppConfig.String("appurlpath") + appkey
 	var filename string
 	//relative_dir =
-	switch appkey {
+	switch t {
 	case "icon":
 		filename = getFileUrl(working_dir + "/icon*")
 	case "pkg":
@@ -44,9 +44,9 @@ func GetUploadPath(t string, appkey string) (url string) {
 
 	}
 	if t == "zip" {
-		url = working_dir + filename
+		url = filename
 	} else {
-		url = url_path + filename
+		url = url_path + strings.Replace(filename, working_dir, "", -1)
 	}
 	return
 }
@@ -79,7 +79,7 @@ func GetUploadScreensPath(appkey string) (urls string) {
 		return
 	}
 	for _, filename := range files {
-		filename = url_path + filename
+		filename = url_path + strings.Replace(filename, working_dir, "", -1)
 		urls = urls + filename + "," //= append(urls, filename)
 	}
 	return

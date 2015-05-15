@@ -43,7 +43,7 @@ func GetAppsList() (apps []*AppUpload) {
 func GetAppCacheInfoById(appid int64) *AppUpload {
 	rConn := app_redis.Conn()
 	defer rConn.Close()
-	//beego.Debug("调用到了哈哈")
+
 	info := app_cache.CacheInfo{APPCENTERLIST, appid}
 	key, err := app_cache.GetKey(info)
 

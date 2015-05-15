@@ -75,6 +75,16 @@ func SearchAppLists(ct int) (apps []*AppUpload) {
  */
 func GetAppInfoById(appid int64) (app *AppUpload) {
 	app = GetAppCacheInfoById(appid)
+	//beego.Debug("缓存中的数据 ", app)
+	if app == nil {
+		var app_info AppUpload
+		AppLists().Filter("appid", appid).One(&app_info)
+		//beego.Debug("取出的值", appid, "====>", app_info)
+		if app_info.Appid > 0 {
+			app = &app_info
+		}
+		//		beego.Debug("数据库中的数据", app)
+	}
 	return
 }
 
