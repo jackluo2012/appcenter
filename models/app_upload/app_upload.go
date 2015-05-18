@@ -26,6 +26,7 @@ type AppUpload struct {
 	Version        string `redis:"v"`
 	Applisted      string `redis:"ald"`
 	Public         string `redis:"pc"`
+	Apptype        string
 	Author         string `redis:"ah"`
 	Source         string `redis:"sc"`
 	Level          string `redis:"lv"`
@@ -44,19 +45,13 @@ type AppUpload struct {
 }
 
 //var apps []AppUpload
-func SearchAppLists(ct int) (apps []*AppUpload) {
-	if ct == 1 {
-
-	}
-	//var uai *models.UserAppInfo
-	//获取用户的信息
-	//	beego.Debug(models.GetUserAppsByUdid(uid, udid, appid))
-	//缓存中拿 数据
+// ct 是类型
+// s 要搜索的字符串
+func SearchAppLists(ct string, s string) (apps []*AppUpload) {
 	apps = GetAppsList()
 	if len(apps) == 0 {
 		AppLists().Filter("applisted", "1").Filter("public", "1").All(&apps)
 		for _, app := range apps {
-
 			app.IconUrl = app_func.GetUploadPath("icon", app.Appkey)
 			app.Category = app_func.CateTran(app.Category)
 			app.DownLoadUrl = app_func.GetAppDownLoadUrl(app.Appid)
@@ -66,6 +61,20 @@ func SearchAppLists(ct int) (apps []*AppUpload) {
 			SetAppsList(app.Appid, app)
 		}
 	}
+	if s != "" {
+		apps = FindAppByName(s)
+	}
+	if ct == "1" {
+		return
+	}
+	if ct == "0" {
+		apps = FindAppByType(ct)
+	}
+
+	//var uai *models.UserAppInfo
+	//获取用户的信息
+	//	beego.Debug(models.GetUserAppsByUdid(uid, udid, appid))
+	//缓存中拿 数据
 
 	return
 }
@@ -94,6 +103,39 @@ func (a *AppUpload) TableName() string {
 
 func AppLists() orm.QuerySeter {
 	return orm.NewOrm().QueryTable(new(AppUpload))
+}
+
+/**
+ * 获取 查找列表
+ */
+func FindAppByName(s string) (apps []*AppUpload) {
+	var maps []orm.Params
+	num, err := AppLists().Filter("applisted", "1").Filter("public", "1").Filter("name__icontains", s).Values(&maps, "appid")
+	//	beego.Debug("搜索结果===", num)
+	//	beego.Debug(maps)
+	if err == nil {
+		if num > 0 {
+			apps = SearchAppsList(maps)
+		}
+	}
+	return
+}
+
+/**
+ * 获取 查找列表
+ */
+func FindAppByType(ctype string) (apps []*AppUpload) {
+	var maps []orm.Params
+
+	num, err := AppLists().Filter("applisted", "1").Filter("public", "1").Filter("apptype", ctype).Values(&maps, "appid")
+	//	beego.Debug("搜索结果===", num)
+	//	beego.Debug(maps)
+	if err == nil {
+		if num > 0 {
+			apps = SearchAppsList(maps)
+		}
+	}
+	return
 }
 
 func AppList() {

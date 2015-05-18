@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>應用詳情</title>
+	<title> {{i18n $.Lang "detail"}} </title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
 	<meta name="apple-touch-fullscreen" content="yes">
@@ -22,7 +22,7 @@
 	<div class="main-oper">
 		<div class="main_content clearfix">
 				<div class="logo logo1"></div>
-			<span class="fontColor">我的应用</span>
+			<span class="fontColor">{{.AppInfo.Name}}</span>
 		</div>
 	</div>
 	<div id="contener">
@@ -41,21 +41,21 @@
 						</div>
 						<div class="app-m-line2">
 						    <div id="appInfo1" style="margin-bottom:5px;">
-						    <label class="app-downCout">下载:&nbsp;<span class="download_count">{{.AppInfo.DownloadCounts}}</span>次</label>
-							<span class="app-size" style="margin-left:20px">大小:&nbsp;{{.AppInfo.Size}}</span>
-							<span class="app-version1" style="margin-left:20px">版本号:&nbsp;{{.AppInfo.Version}}</span>
-							<span class="app-developer" style="margin-left:20px">开发者:&nbsp;{{.AppInfo.Author}}</span><br/>
+						    <label class="app-downCout">{{i18n $.Lang "download"}} :&nbsp;<span class="download_count">{{.AppInfo.DownloadCounts}}</span>{{i18n $.Lang "downs"}} </label>
+							<span class="app-size" style="margin-left:20px">{{i18n $.Lang "size"}} :&nbsp;{{.AppInfo.Size}}</span>
+							<span class="app-version1" style="margin-left:20px">{{i18n $.Lang "version"}}:&nbsp;{{.AppInfo.Version}}</span>
+							<span class="app-developer" style="margin-left:20px">{{i18n $.Lang "developer"}}:&nbsp;{{.AppInfo.Author}}</span><br/>
 						    </div>
-							<span class="app-update">更新时间:&nbsp;{{.AppInfo.Created}}</span>
+							<span class="app-update">{{i18n $.Lang "updatetime"}}:&nbsp;{{.AppInfo.Created}}</span>
 						</div>
 						<div class="app-m-line3">
 							{{if eq .AppInfo.Install "3"}}
 							
-							<a class="downloadUrl download_Button" href="{{.AppInfo.DownLoadUrl}}" >更新</a>
+							<a class="downloadUrl download_Button" target="_blank" href="{{.AppInfo.DownLoadUrl}}" >{{i18n $.Lang "update"}} </a>
 							{{else if eq .AppInfo.Install "2"}}
-							<a class="downloadUrl download_Button" href="#" >已安装</a>
+							<a class="downloadUrl download_Button" href="#" target="_blank">{{i18n .Lang "readydown"}}</a>
 							{{else}}
-								<a class="downloadUrl download_Button" href="{{.AppInfo.DownLoadUrl}}" >下载</a>
+								<a class="downloadUrl download_Button" target="_blank" href="{{.AppInfo.DownLoadUrl}}" >{{i18n $.Lang "download"}}</a>
 							{{end}}
 
 						</div>
@@ -63,7 +63,7 @@
 				</div>
 				<div class="app-part2">
 					<div class="part2-title"></div>
-					<span class="fontSize">介绍详情</span>
+					<span class="fontSize">{{i18n $.Lang "description"}}</span>
 					<div class="margi">
 						<div class="part2-description">{{.AppInfo.Description}}</div>
 						<div class="app-carousel">
@@ -98,15 +98,7 @@
 </div>
 </div>
 </div>
-  <!-- 遮罩-kitty-2014-10-20 -->
-  <div class="appMCenter_pop" style="display:none;">
-   </div>
-   <section  class="appMCenter_popCont" style="display:none;">
-      <div class="appMCenter_popConttitile">请先登录Elastos账号</div>
-        <!-- <div class="appMCenter_popContBt">
-          <button><确定></button>
-        </div> -->
-   </section>
+
 <script type="text/javascript" src="/static/js/owl.carousel.js"></script>
 <script src="/static/js/application.js"></script>
 <script>
@@ -123,7 +115,7 @@
 
     </script>
     <script type="text/javascript">
-
+/*
     //下载前登录验证
     $(".download_Button").click(function(e){
         var isLogin = location.search;
@@ -152,7 +144,7 @@ $(function(){
 
 
 })
-
+*/
 
     </script>
 </body>

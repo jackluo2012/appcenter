@@ -4,11 +4,17 @@ import (
 	"crypto/md5"
 	"fmt"
 	"github.com/astaxie/beego"
+	"github.com/beego/i18n"
+	"html/template"
 	"os"
 	"path/filepath"
 	"strconv"
 	"strings"
 )
+
+func init() {
+	beego.AddFuncMap("i18n", i18nHTML)
+}
 
 /**
  *	md5
@@ -17,6 +23,10 @@ func Md5(buf []byte) string {
 	hash := md5.New()
 	hash.Write(buf)
 	return fmt.Sprintf("%x", hash.Sum(nil))
+}
+
+func i18nHTML(lang, format string, args ...interface{}) template.HTML {
+	return template.HTML(i18n.Tr(lang, format, args...))
 }
 
 /**

@@ -397,6 +397,7 @@ var brTest=$(".part2-description").find("br");
 $(brTest).before('</br>')
 
 
+/*
     //下载前登录验证
     $(".download_Button").click(function(e) {
         var isLogin = location.search,
@@ -420,15 +421,15 @@ $(brTest).before('</br>')
             },1000)
         }
     });
-
+*/
 
 });
 //弹出层
-  $(".appMCenter_popContBt button").click(function(){       
+/*
+$(".appMCenter_popContBt button").click(function(){       
 
-                     $(".appMCenter_pop").hide();
-                     $(".appMCenter_popCont").hide();
+     $(".appMCenter_pop").hide();
+     $(".appMCenter_popCont").hide();
 
-
-
-            })
+})
+*/

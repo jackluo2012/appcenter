@@ -4,7 +4,8 @@ import (
 	"appcenter/common/app_cache"
 	. "appcenter/common/app_ckey"
 	"appcenter/common/app_redis"
-	//	"github.com/astaxie/beego"
+	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/orm"
 	"github.com/garyburd/redigo/redis"
 )
 
@@ -33,6 +34,32 @@ func GetAppsList() (apps []*AppUpload) {
 	} else {
 		panic(err)
 	}
+	return
+}
+
+/**
+ * 获取查询的结果值
+ */
+func SearchAppsList(maps []orm.Params) (apps []*AppUpload) {
+	rConn := app_redis.Conn()
+	defer rConn.Close()
+	for _, m := range maps {
+		//beego.Debug("搜索结果的值  ")
+		info := app_cache.CacheInfo{APPCENTERLIST, m["Appid"]}
+		key, _ := app_cache.GetKey(info)
+		beego.Debug(key)
+		v, err := redis.Values(rConn.Do("HGETALL", key))
+		if err != nil {
+			panic(err)
+		}
+
+		var app AppUpload
+		if err := redis.ScanStruct(v, &app); err != nil {
+			panic(err)
+		}
+		apps = append(apps, &app)
+	}
+
 	return
 }
 

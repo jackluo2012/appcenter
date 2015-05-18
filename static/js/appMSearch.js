@@ -14,19 +14,41 @@ $(function() {
     if(currUrl.indexOf("s=")!=-1){
         $("#inputText img").css({"display":"block"});
     }
-    var search = location.search,searchVal,searchReg=/s=([^&]*)/g;
-    $("#sure").click(function() {
-        var isLogin = location.search,
-            reg = /(?!isLogin=)true/g,
-            name = $.trim($("#inputText input").val()),
-            Surl;
+    var search = location.search,searchVal,searchReg=/s=([^&]*)/g,uidReg=/uid=([^&]*)/g,udidReg=/udid=([^&]*)/g,secretkeyReg=/secretkey=([^&]*)/g,cReg=/c=([^&]*)/g;
 
-        if (isLogin.match(reg)) {
-            isLogin = 'true';
-        } else {
-            isLogin = 'false';
+
+    /**
+            var res = searchReg.exec(search);
+        if(res&&res[1]!=''){
+            $('#inputText input').val(decodeURI(res[1]));
+    */
+
+
+
+    $("#sure").click(function() {
+        var name = $.trim($("#inputText input").val()),
+            uid=udid=secretkey=c="",Surl;
+
+        var res = uidReg.exec(search)
+        if(res&&res[1]!=''){
+            uid = res[1];
         }
-        Surl = "/appMCenter/appMSearch.php?s=" + name + "&isLogin=" + isLogin;
+        var res = udidReg.exec(search)
+        if(res&&res[1]!=''){
+            udid = res[1];
+        }
+        var res = secretkeyReg.exec(search)
+        if(res&&res[1]!=''){
+            secretkey = res[1];
+        }        
+        var res = cReg.exec(search)
+        if(res&&res[1]!=''){
+            c = res[1];
+        }        
+        
+
+
+        Surl = "?s=" + name + "&uid="+uid+ "&udid="+udid+"&secretkey="+secretkey+"&c="+c;
         location.href = Surl;
     });
     //搜索框
@@ -94,12 +116,14 @@ $(function() {
         } else {
             e.preventDefault();
         }
+        location.href = $(this).find("a").attr("href")
+/*
         if (isLogin.match(reg)) {
             location.href = $(this).find("a").attr("href") + "&isLogin=true";
         } else {
             location.href = $(this).find("a").attr("href") + "&isLogin=false";
         }
-
+*/
     })
 
     // 搜索栏
@@ -119,6 +143,7 @@ $(function() {
     });
 
     //下载前登录验证
+    /*
     $(".download_Button").click(function(e) {
         var isLogin = location.search,
             reg = /(?!isLogin=)true/g;
@@ -140,7 +165,7 @@ $(function() {
                 $(".appMCenter_popCont").hide();
             },1000)
         }
-    });
+    });*/
 
     $(".appMCenter_pop,.appMCenter_popCont").click(function(){
         $(".appMCenter_pop").hide();
@@ -163,36 +188,26 @@ $(function() {
     }
 
     $("#imgChange").click(function() {
-        var isLogin = location.search,
-            reg = /(?!isLogin=)true/g,
-            name = $.trim($("#inputText input").val()),
-            Surl;
+        var name = $.trim($("#inputText input").val()),
+            uid=udid=secretkey=c="",Surl;
 
-        if (isLogin.match(reg)) {
-            isLogin = 'true';
-        } else {
-            isLogin = 'false';
+        var res = uidReg.exec(search)
+        if(res&&res[1]!=''){
+            uid = res[1];
         }
-        var cookie = document.cookie;   //取得cookie的中的值,如果没有默认是
-        //回到android应用页面首页
-        if(cookie!=null&&cookie!=undefined){
-            var start = 0;
-            var end  = 0 ;
-            if(cookie.indexOf("c=")!=-1){
-                start = cookie.indexOf("c=");
-                end = cookie.indexOf(";",start+2);
-                if(end==-1) {
-                end=cookie.length; 
-               }
-                var currArg = cookie.substring(start+2,end); 
-                Surl = "/appMCenter/appMSearch.php?"+currArg;
-
-            }else{
-               Surl = "/appMCenter/appMSearch.php?c=0&isLogin="+isLogin;
-            }
-        }else{
-            Surl = "/appMCenter/appMSearch.php?c=0&isLogin="+isLogin;
+        var res = udidReg.exec(search)
+        if(res&&res[1]!=''){
+            udid = res[1];
         }
+        var res = secretkeyReg.exec(search)
+        if(res&&res[1]!=''){
+            secretkey = res[1];
+        }        
+        var res = cReg.exec(search)
+        if(res&&res[1]!=''){
+            c = res[1];
+        }        
+        Surl = "?s=" + name + "&uid="+uid+ "&udid="+udid+"&secretkey="+secretkey+"&c="+c;
         location.href = Surl;
     });
 
