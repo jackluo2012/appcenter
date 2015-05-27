@@ -90,11 +90,13 @@
         </div>
       </a>
       {{else if eq .Install "2"}}  
+      <a class="download_Button" href="#">
         <div class="listC_R">
           <span>
-            {{i18n .Lang "readydown"}} 
+            {{i18n $.Lang "readydown"}} 
             </span>
         </div>
+        </a>
       {{else }}    
        <a class="download_Button" href="{{.DownLoadUrl}}" target="_blank">
         <div class="listC_R">
@@ -106,10 +108,52 @@
       {{end}}
 {{end}}
 
+<section class="appMCenter_pop"></section>
+<section  class="appMCenter_popCont">
+<div class="appMCenter_popConttitile">
+{{i18n $.Lang "loginaccess"}}
 </div>
+</section>
+</div>
+
 <script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="/static/js/smoke.js"></script>
 <script type="text/javascript" src="/static/js/appMSearch.js"></script>
+<script type="text/javascript">
+//*
 
+//弹出层
+$(function(){
+
+  $(".appMCenter_popContBt button").click(function() {                
+                     $(".appMCenter_pop").hide();
+                     $(".appMCenter_popCont").hide();
+  });
+ //下载前登录验证
+    $(".download_Button").click(function(e){
+        //*
+        var isLogin = location.search,
+            reg = /secretkey=/g;
+
+        if(!e.preventDefault()){
+            e.returnValue = false;
+        }
+
+        //*
+        if(isLogin.match(reg)){
+            location.href = $(this).attr("href");
+        }else{
+            $(".appMCenter_pop").show();
+            $(".appMCenter_popCont").show();
+
+        }
+    });
+
+
+})
+
+//*/
+
+    </script>
 </body>
 </html>

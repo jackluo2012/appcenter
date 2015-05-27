@@ -20582,3 +20582,516 @@
 2015/05/18 17:28:14 [index.go:167] [D] false 
 2015/05/18 17:28:14 [router.go:845] [D] | GET        | /show/911                                | 7.0004ms         | match      | /show/:id                                | 
 2015/05/18 17:28:14 [router.go:845] [D] | GET        | /show/css/Mstyle.css                     | 1ms              | notmatch   | 
+2015/05/21 16:27:04 [app.go:103] [I] http server Running on :8080
+2015/05/21 16:27:06 [app.go:103] [I] http server Running on :8080
+2015/05/21 16:27:11 [index.go:44] [D] 0 
+2015/05/21 16:27:11 [index.go:50] [D] false 
+2015/05/21 16:27:11 [index.go:51] [D] false 
+2015/05/21 16:27:11 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:27:11 [index.go:131] [D] false 
+2015/05/21 16:27:11 [router.go:845] [D] | GET        | /                                        | 68.0039ms        | match      | /                                        | 
+2015/05/21 16:27:19 [index.go:44] [D] 2 
+2015/05/21 16:27:19 [index.go:50] [D] false 
+2015/05/21 16:27:19 [index.go:51] [D] false 
+2015/05/21 16:27:19 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:27:19 [index.go:131] [D] false 
+2015/05/21 16:27:19 [router.go:845] [D] | GET        | /                                        | 29.0016ms        | match      | /                                        | 
+2015/05/21 16:27:23 [index.go:44] [D] 2 
+2015/05/21 16:27:23 [index.go:50] [D] false 
+2015/05/21 16:27:23 [index.go:51] [D] false 
+2015/05/21 16:27:23 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:27:23 [index.go:131] [D] false 
+2015/05/21 16:27:23 [router.go:845] [D] | GET        | /                                        | 27.0015ms        | match      | /                                        | 
+2015/05/21 16:29:06 [index.go:44] [D] 2 
+2015/05/21 16:29:06 [index.go:50] [D] false 
+2015/05/21 16:29:06 [index.go:51] [D] false 
+2015/05/21 16:29:06 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:29:06 [index.go:131] [D] true 
+2015/05/21 16:29:06 [router.go:845] [D] | GET        | /                                        | 20.0012ms        | match      | /                                        | 
+2015/05/21 16:30:04 [index.go:44] [D] 2 
+2015/05/21 16:30:04 [index.go:50] [D] false 
+2015/05/21 16:30:04 [index.go:51] [D] false 
+2015/05/21 16:30:04 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:30:04 [index.go:131] [D] true 
+2015/05/21 16:30:04 [router.go:845] [D] | GET        | /                                        | 30.0017ms        | match      | /                                        | 
+2015/05/21 16:30:23 [index.go:44] [D] 2 
+2015/05/21 16:30:23 [index.go:50] [D] false 
+2015/05/21 16:30:23 [index.go:51] [D] false 
+2015/05/21 16:30:23 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:30:23 [index.go:131] [D] true 
+2015/05/21 16:30:23 [router.go:845] [D] | GET        | /                                        | 26.0015ms        | match      | /                                        | 
+2015/05/21 16:30:55 [index.go:44] [D] 2 
+2015/05/21 16:30:55 [index.go:50] [D] false 
+2015/05/21 16:30:55 [index.go:51] [D] false 
+2015/05/21 16:30:55 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:30:55 [index.go:131] [D] true 
+2015/05/21 16:30:55 [router.go:845] [D] | GET        | /                                        | 25.0014ms        | match      | /                                        | 
+2015/05/21 16:35:39 [index.go:44] [D] 2 
+2015/05/21 16:35:39 [index.go:50] [D] false 
+2015/05/21 16:35:39 [index.go:51] [D] false 
+2015/05/21 16:35:39 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:35:39 [index.go:131] [D] true 
+2015/05/21 16:35:39 [router.go:845] [D] | GET        | /                                        | 34.002ms         | match      | /                                        | 
+2015/05/21 16:35:41 [index.go:44] [D] 2 
+2015/05/21 16:35:41 [index.go:50] [D] false 
+2015/05/21 16:35:41 [index.go:51] [D] false 
+2015/05/21 16:35:41 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:35:41 [index.go:131] [D] false 
+2015/05/21 16:35:41 [router.go:845] [D] | GET        | /                                        | 25.0015ms        | match      | /                                        | 
+2015/05/21 16:35:43 [index.go:44] [D] 2 
+2015/05/21 16:35:43 [index.go:50] [D] false 
+2015/05/21 16:35:43 [index.go:51] [D] false 
+2015/05/21 16:35:43 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:35:43 [index.go:167] [D] false 
+2015/05/21 16:35:43 [router.go:845] [D] | GET        | /show/889                                | 13.0007ms        | match      | /show/:id                                | 
+2015/05/21 16:35:43 [router.go:845] [D] | GET        | /show/css/Mstyle.css                     | 1ms              | notmatch   | 
+2015/05/21 16:35:47 [index.go:44] [D] 2 
+2015/05/21 16:35:47 [index.go:50] [D] false 
+2015/05/21 16:35:47 [index.go:51] [D] false 
+2015/05/21 16:35:47 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:35:47 [index.go:167] [D] false 
+2015/05/21 16:35:47 [router.go:845] [D] | GET        | /show/889                                | 10.0006ms        | match      | /show/:id                                | 
+2015/05/21 16:35:47 [router.go:845] [D] | GET        | /show/css/Mstyle.css                     | 2.0001ms         | notmatch   | 
+2015/05/21 16:36:07 [index.go:44] [D] 2 
+2015/05/21 16:36:07 [index.go:50] [D] false 
+2015/05/21 16:36:07 [index.go:51] [D] false 
+2015/05/21 16:36:07 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:36:07 [index.go:167] [D] false 
+2015/05/21 16:36:07 [router.go:845] [D] | GET        | /show/889                                | 10.0006ms        | match      | /show/:id                                | 
+2015/05/21 16:36:07 [router.go:845] [D] | GET        | /show/css/Mstyle.css                     | 4.0002ms         | notmatch   | 
+2015/05/21 16:36:44 [index.go:44] [D] 2 
+2015/05/21 16:36:44 [index.go:50] [D] false 
+2015/05/21 16:36:44 [index.go:51] [D] false 
+2015/05/21 16:36:44 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:36:44 [index.go:167] [D] false 
+2015/05/21 16:36:44 [router.go:845] [D] | GET        | /show/889                                | 8.0004ms         | match      | /show/:id                                | 
+2015/05/21 16:36:45 [index.go:44] [D] 2 
+2015/05/21 16:36:45 [index.go:50] [D] false 
+2015/05/21 16:36:45 [index.go:51] [D] false 
+2015/05/21 16:36:45 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:36:45 [index.go:167] [D] false 
+2015/05/21 16:36:45 [router.go:845] [D] | GET        | /show/889                                | 12.0007ms        | match      | /show/:id                                | 
+2015/05/21 16:38:08 [index.go:44] [D] 2 
+2015/05/21 16:38:08 [index.go:50] [D] false 
+2015/05/21 16:38:08 [index.go:51] [D] false 
+2015/05/21 16:38:08 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:38:08 [index.go:167] [D] false 
+2015/05/21 16:38:08 [router.go:845] [D] | GET        | /show/889                                | 10.0006ms        | match      | /show/:id                                | 
+2015/05/21 16:38:12 [index.go:44] [D] 2 
+2015/05/21 16:38:12 [index.go:50] [D] false 
+2015/05/21 16:38:12 [index.go:51] [D] false 
+2015/05/21 16:38:12 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:38:12 [index.go:167] [D] false 
+2015/05/21 16:38:12 [router.go:845] [D] | GET        | /show/889                                | 11.0006ms        | match      | /show/:id                                | 
+2015/05/21 16:44:11 [index.go:44] [D] 2 
+2015/05/21 16:44:11 [index.go:50] [D] false 
+2015/05/21 16:44:11 [index.go:51] [D] false 
+2015/05/21 16:44:11 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:44:11 [index.go:167] [D] false 
+2015/05/21 16:44:11 [router.go:845] [D] | GET        | /show/889                                | 10.0006ms        | match      | /show/:id                                | 
+2015/05/21 16:45:08 [index.go:44] [D] 2 
+2015/05/21 16:45:08 [index.go:50] [D] false 
+2015/05/21 16:45:08 [index.go:51] [D] false 
+2015/05/21 16:45:08 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:45:08 [index.go:167] [D] false 
+2015/05/21 16:45:08 [router.go:845] [D] | GET        | /show/889                                | 10.0006ms        | match      | /show/:id                                | 
+2015/05/21 16:46:17 [index.go:44] [D] 2 
+2015/05/21 16:46:17 [index.go:50] [D] false 
+2015/05/21 16:46:17 [index.go:51] [D] false 
+2015/05/21 16:46:17 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:46:17 [index.go:167] [D] false 
+2015/05/21 16:46:17 [router.go:845] [D] | GET        | /show/889                                | 13.0007ms        | match      | /show/:id                                | 
+2015/05/21 16:46:22 [index.go:44] [D] 2 
+2015/05/21 16:46:22 [index.go:50] [D] false 
+2015/05/21 16:46:22 [index.go:51] [D] false 
+2015/05/21 16:46:22 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:46:22 [index.go:167] [D] false 
+2015/05/21 16:46:22 [router.go:845] [D] | GET        | /show/889                                | 6.0003ms         | match      | /show/:id                                | 
+2015/05/21 16:46:23 [index.go:44] [D] 2 
+2015/05/21 16:46:23 [index.go:50] [D] false 
+2015/05/21 16:46:23 [index.go:51] [D] false 
+2015/05/21 16:46:23 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:46:23 [index.go:167] [D] false 
+2015/05/21 16:46:23 [router.go:845] [D] | GET        | /show/889                                | 13.0007ms        | match      | /show/:id                                | 
+2015/05/21 16:47:15 [index.go:44] [D] 2 
+2015/05/21 16:47:15 [index.go:50] [D] false 
+2015/05/21 16:47:15 [index.go:51] [D] false 
+2015/05/21 16:47:15 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:47:15 [index.go:167] [D] false 
+2015/05/21 16:47:15 [router.go:845] [D] | GET        | /show/889                                | 16.0009ms        | match      | /show/:id                                | 
+2015/05/21 16:48:14 [index.go:44] [D] 2 
+2015/05/21 16:48:14 [index.go:50] [D] false 
+2015/05/21 16:48:14 [index.go:51] [D] false 
+2015/05/21 16:48:14 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:48:14 [index.go:167] [D] false 
+2015/05/21 16:48:14 [router.go:845] [D] | GET        | /show/889                                | 11.0006ms        | match      | /show/:id                                | 
+2015/05/21 16:48:14 [index.go:44] [D] 2 
+2015/05/21 16:48:14 [index.go:50] [D] false 
+2015/05/21 16:48:14 [index.go:51] [D] false 
+2015/05/21 16:48:14 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:48:14 [index.go:167] [D] false 
+2015/05/21 16:48:14 [router.go:845] [D] | GET        | /show/889                                | 12.0007ms        | match      | /show/:id                                | 
+2015/05/21 16:48:55 [index.go:44] [D] 2 
+2015/05/21 16:48:55 [index.go:50] [D] false 
+2015/05/21 16:48:55 [index.go:51] [D] false 
+2015/05/21 16:48:55 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:48:55 [index.go:131] [D] false 
+2015/05/21 16:48:55 [router.go:845] [D] | GET        | /                                        | 31.0018ms        | match      | /                                        | 
+2015/05/21 16:50:34 [index.go:44] [D] 2 
+2015/05/21 16:50:34 [index.go:50] [D] false 
+2015/05/21 16:50:34 [index.go:51] [D] false 
+2015/05/21 16:50:34 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:50:34 [index.go:131] [D] false 
+2015/05/21 16:50:34 [router.go:845] [D] | GET        | /                                        | 26.0015ms        | match      | /                                        | 
+2015/05/21 16:50:35 [index.go:44] [D] 2 
+2015/05/21 16:50:35 [index.go:50] [D] false 
+2015/05/21 16:50:35 [index.go:51] [D] false 
+2015/05/21 16:50:35 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:50:35 [index.go:131] [D] false 
+2015/05/21 16:50:35 [router.go:845] [D] | GET        | /                                        | 26.0014ms        | match      | /                                        | 
+2015/05/21 16:50:36 [index.go:44] [D] 2 
+2015/05/21 16:50:36 [index.go:50] [D] false 
+2015/05/21 16:50:36 [index.go:51] [D] false 
+2015/05/21 16:50:36 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:50:36 [index.go:167] [D] false 
+2015/05/21 16:50:36 [router.go:845] [D] | GET        | /show/888                                | 11.0006ms        | match      | /show/:id                                | 
+2015/05/21 16:51:21 [index.go:44] [D] 2 
+2015/05/21 16:51:21 [index.go:50] [D] false 
+2015/05/21 16:51:21 [index.go:51] [D] false 
+2015/05/21 16:51:21 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:51:21 [index.go:167] [D] false 
+2015/05/21 16:51:21 [router.go:845] [D] | GET        | /show/888                                | 12.0007ms        | match      | /show/:id                                | 
+2015/05/21 16:51:41 [index.go:44] [D] 2 
+2015/05/21 16:51:41 [index.go:50] [D] false 
+2015/05/21 16:51:41 [index.go:51] [D] false 
+2015/05/21 16:51:41 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:51:41 [index.go:167] [D] false 
+2015/05/21 16:51:41 [router.go:845] [D] | GET        | /show/888                                | 10.0006ms        | match      | /show/:id                                | 
+2015/05/21 16:52:47 [index.go:44] [D] 2 
+2015/05/21 16:52:47 [index.go:50] [D] false 
+2015/05/21 16:52:47 [index.go:51] [D] false 
+2015/05/21 16:52:47 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:52:47 [index.go:167] [D] false 
+2015/05/21 16:52:47 [router.go:845] [D] | GET        | /show/888                                | 10.0005ms        | match      | /show/:id                                | 
+2015/05/21 16:52:54 [index.go:44] [D] 2 
+2015/05/21 16:52:54 [index.go:50] [D] false 
+2015/05/21 16:52:54 [index.go:51] [D] false 
+2015/05/21 16:52:54 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:52:54 [index.go:167] [D] false 
+2015/05/21 16:52:54 [router.go:845] [D] | GET        | /show/888                                | 11.0007ms        | match      | /show/:id                                | 
+2015/05/21 16:53:01 [index.go:44] [D] 2 
+2015/05/21 16:53:01 [index.go:50] [D] false 
+2015/05/21 16:53:01 [index.go:51] [D] false 
+2015/05/21 16:53:01 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:53:01 [index.go:167] [D] false 
+2015/05/21 16:53:01 [router.go:845] [D] | GET        | /show/888                                | 10.0006ms        | match      | /show/:id                                | 
+2015/05/21 16:53:05 [index.go:44] [D] 2 
+2015/05/21 16:53:05 [index.go:50] [D] false 
+2015/05/21 16:53:05 [index.go:51] [D] false 
+2015/05/21 16:53:05 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:53:05 [index.go:167] [D] false 
+2015/05/21 16:53:05 [router.go:845] [D] | GET        | /show/888                                | 13.0007ms        | match      | /show/:id                                | 
+2015/05/21 16:53:10 [index.go:44] [D] 2 
+2015/05/21 16:53:10 [index.go:50] [D] false 
+2015/05/21 16:53:10 [index.go:51] [D] false 
+2015/05/21 16:53:10 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:53:10 [index.go:167] [D] false 
+2015/05/21 16:53:10 [router.go:845] [D] | GET        | /show/888                                | 10.0006ms        | match      | /show/:id                                | 
+2015/05/21 16:53:16 [index.go:44] [D] 2 
+2015/05/21 16:53:16 [index.go:50] [D] false 
+2015/05/21 16:53:16 [index.go:51] [D] false 
+2015/05/21 16:53:16 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 16:53:16 [index.go:167] [D] false 
+2015/05/21 16:53:16 [router.go:845] [D] | GET        | /show/888                                | 12.0007ms        | match      | /show/:id                                | 
+2015/05/21 17:04:07 [index.go:44] [D] 2 
+2015/05/21 17:04:07 [index.go:50] [D] false 
+2015/05/21 17:04:07 [index.go:51] [D] false 
+2015/05/21 17:04:07 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:04:07 [index.go:167] [D] false 
+2015/05/21 17:04:07 [router.go:845] [D] | GET        | /show/888                                | 11.0006ms        | match      | /show/:id                                | 
+2015/05/21 17:07:39 [index.go:44] [D] 2 
+2015/05/21 17:07:39 [index.go:50] [D] false 
+2015/05/21 17:07:39 [index.go:51] [D] false 
+2015/05/21 17:07:39 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:07:39 [index.go:167] [D] false 
+2015/05/21 17:07:39 [router.go:845] [D] | GET        | /show/888                                | 12.0007ms        | match      | /show/:id                                | 
+2015/05/21 17:07:40 [index.go:44] [D] 2 
+2015/05/21 17:07:40 [index.go:50] [D] false 
+2015/05/21 17:07:40 [index.go:51] [D] false 
+2015/05/21 17:07:40 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:07:40 [index.go:167] [D] false 
+2015/05/21 17:07:40 [router.go:845] [D] | GET        | /show/888                                | 12.0007ms        | match      | /show/:id                                | 
+2015/05/21 17:07:40 [index.go:44] [D] 2 
+2015/05/21 17:07:40 [index.go:50] [D] false 
+2015/05/21 17:07:40 [index.go:51] [D] false 
+2015/05/21 17:07:40 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:07:40 [index.go:167] [D] false 
+2015/05/21 17:07:40 [router.go:845] [D] | GET        | /show/888                                | 6.0003ms         | match      | /show/:id                                | 
+2015/05/21 17:07:40 [index.go:44] [D] 2 
+2015/05/21 17:07:40 [index.go:50] [D] false 
+2015/05/21 17:07:40 [index.go:51] [D] false 
+2015/05/21 17:07:40 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:07:40 [index.go:167] [D] false 
+2015/05/21 17:07:40 [router.go:845] [D] | GET        | /show/888                                | 8.0005ms         | match      | /show/:id                                | 
+2015/05/21 17:07:44 [index.go:44] [D] 2 
+2015/05/21 17:07:44 [index.go:50] [D] false 
+2015/05/21 17:07:44 [index.go:51] [D] false 
+2015/05/21 17:07:44 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:07:44 [index.go:167] [D] false 
+2015/05/21 17:07:44 [router.go:845] [D] | GET        | /show/888                                | 12.0007ms        | match      | /show/:id                                | 
+2015/05/21 17:07:45 [index.go:44] [D] 2 
+2015/05/21 17:07:45 [index.go:50] [D] false 
+2015/05/21 17:07:45 [index.go:51] [D] false 
+2015/05/21 17:07:45 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:07:45 [index.go:167] [D] false 
+2015/05/21 17:07:45 [router.go:845] [D] | GET        | /show/888                                | 11.0006ms        | match      | /show/:id                                | 
+2015/05/21 17:07:47 [index.go:44] [D] 2 
+2015/05/21 17:07:47 [index.go:50] [D] false 
+2015/05/21 17:07:47 [index.go:51] [D] false 
+2015/05/21 17:07:47 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:07:47 [index.go:167] [D] false 
+2015/05/21 17:07:47 [router.go:845] [D] | GET        | /show/888                                | 13.0007ms        | match      | /show/:id                                | 
+2015/05/21 17:08:02 [index.go:44] [D] 2 
+2015/05/21 17:08:02 [index.go:50] [D] false 
+2015/05/21 17:08:02 [index.go:51] [D] false 
+2015/05/21 17:08:02 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:08:02 [index.go:167] [D] false 
+2015/05/21 17:08:02 [router.go:845] [D] | GET        | /show/888                                | 8.0004ms         | match      | /show/:id                                | 
+2015/05/21 17:08:21 [index.go:44] [D] 2 
+2015/05/21 17:08:21 [index.go:50] [D] false 
+2015/05/21 17:08:21 [index.go:51] [D] false 
+2015/05/21 17:08:21 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:08:21 [index.go:167] [D] false 
+2015/05/21 17:08:21 [router.go:845] [D] | GET        | /show/888                                | 10.0006ms        | match      | /show/:id                                | 
+2015/05/21 17:08:27 [index.go:44] [D] 2 
+2015/05/21 17:08:27 [index.go:50] [D] false 
+2015/05/21 17:08:27 [index.go:51] [D] false 
+2015/05/21 17:08:27 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:08:27 [index.go:167] [D] false 
+2015/05/21 17:08:27 [router.go:845] [D] | GET        | /show/888                                | 14.0008ms        | match      | /show/:id                                | 
+2015/05/21 17:08:47 [index.go:44] [D] 2 
+2015/05/21 17:08:47 [index.go:50] [D] false 
+2015/05/21 17:08:47 [index.go:51] [D] false 
+2015/05/21 17:08:47 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:08:47 [index.go:167] [D] false 
+2015/05/21 17:08:47 [router.go:845] [D] | GET        | /show/888                                | 12.0007ms        | match      | /show/:id                                | 
+2015/05/21 17:08:53 [index.go:44] [D] 2 
+2015/05/21 17:08:53 [index.go:50] [D] false 
+2015/05/21 17:08:53 [index.go:51] [D] false 
+2015/05/21 17:08:53 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:08:53 [index.go:167] [D] false 
+2015/05/21 17:08:53 [router.go:845] [D] | GET        | /show/888                                | 11.0006ms        | match      | /show/:id                                | 
+2015/05/21 17:08:57 [index.go:44] [D] 2 
+2015/05/21 17:08:57 [index.go:50] [D] false 
+2015/05/21 17:08:57 [index.go:51] [D] false 
+2015/05/21 17:08:57 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:08:57 [index.go:167] [D] false 
+2015/05/21 17:08:57 [router.go:845] [D] | GET        | /show/888                                | 12.0007ms        | match      | /show/:id                                | 
+2015/05/21 17:10:44 [index.go:44] [D] 2 
+2015/05/21 17:10:44 [index.go:50] [D] false 
+2015/05/21 17:10:44 [index.go:51] [D] false 
+2015/05/21 17:10:44 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:10:44 [index.go:167] [D] false 
+2015/05/21 17:10:44 [router.go:845] [D] | GET        | /show/888                                | 11.0006ms        | match      | /show/:id                                | 
+2015/05/21 17:10:46 [index.go:44] [D] 2 
+2015/05/21 17:10:46 [index.go:50] [D] false 
+2015/05/21 17:10:46 [index.go:51] [D] false 
+2015/05/21 17:10:46 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:10:46 [index.go:167] [D] false 
+2015/05/21 17:10:46 [router.go:845] [D] | GET        | /show/888                                | 10.0005ms        | match      | /show/:id                                | 
+2015/05/21 17:10:47 [index.go:44] [D] 2 
+2015/05/21 17:10:47 [index.go:50] [D] false 
+2015/05/21 17:10:47 [index.go:51] [D] false 
+2015/05/21 17:10:47 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:10:47 [index.go:167] [D] false 
+2015/05/21 17:10:47 [router.go:845] [D] | GET        | /show/888                                | 12.0007ms        | match      | /show/:id                                | 
+2015/05/21 17:10:48 [index.go:44] [D] 2 
+2015/05/21 17:10:48 [index.go:50] [D] false 
+2015/05/21 17:10:48 [index.go:51] [D] false 
+2015/05/21 17:10:48 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:10:48 [index.go:167] [D] false 
+2015/05/21 17:10:48 [router.go:845] [D] | GET        | /show/888                                | 6.0003ms         | match      | /show/:id                                | 
+2015/05/21 17:10:49 [index.go:44] [D] 2 
+2015/05/21 17:10:49 [index.go:50] [D] false 
+2015/05/21 17:10:49 [index.go:51] [D] false 
+2015/05/21 17:10:49 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:10:49 [index.go:167] [D] false 
+2015/05/21 17:10:49 [router.go:845] [D] | GET        | /show/888                                | 10.0005ms        | match      | /show/:id                                | 
+2015/05/21 17:10:50 [index.go:44] [D] 2 
+2015/05/21 17:10:50 [index.go:50] [D] false 
+2015/05/21 17:10:50 [index.go:51] [D] false 
+2015/05/21 17:10:50 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:10:50 [index.go:167] [D] false 
+2015/05/21 17:10:50 [router.go:845] [D] | GET        | /show/888                                | 11.0006ms        | match      | /show/:id                                | 
+2015/05/21 17:10:50 [index.go:44] [D] 2 
+2015/05/21 17:10:50 [index.go:50] [D] false 
+2015/05/21 17:10:50 [index.go:51] [D] false 
+2015/05/21 17:10:50 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:10:50 [index.go:131] [D] false 
+2015/05/21 17:10:50 [router.go:845] [D] | GET        | /                                        | 24.0014ms        | match      | /                                        | 
+2015/05/21 17:10:50 [index.go:44] [D] 2 
+2015/05/21 17:10:50 [index.go:50] [D] false 
+2015/05/21 17:10:50 [index.go:51] [D] false 
+2015/05/21 17:10:50 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:10:50 [index.go:131] [D] false 
+2015/05/21 17:10:51 [router.go:845] [D] | GET        | /                                        | 15.0009ms        | match      | /                                        | 
+2015/05/21 17:10:52 [index.go:44] [D] 2 
+2015/05/21 17:10:52 [index.go:50] [D] false 
+2015/05/21 17:10:52 [index.go:51] [D] false 
+2015/05/21 17:10:52 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:10:52 [index.go:131] [D] false 
+2015/05/21 17:10:52 [router.go:845] [D] | GET        | /                                        | 28.0016ms        | match      | /                                        | 
+2015/05/21 17:10:57 [index.go:44] [D] 2 
+2015/05/21 17:10:57 [index.go:50] [D] false 
+2015/05/21 17:10:57 [index.go:51] [D] false 
+2015/05/21 17:10:57 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:10:57 [index.go:131] [D] false 
+2015/05/21 17:10:57 [router.go:845] [D] | GET        | /                                        | 28.0016ms        | match      | /                                        | 
+2015/05/21 17:11:00 [index.go:44] [D] 2 
+2015/05/21 17:11:00 [index.go:50] [D] false 
+2015/05/21 17:11:00 [index.go:51] [D] false 
+2015/05/21 17:11:00 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:11:00 [index.go:131] [D] false 
+2015/05/21 17:11:00 [router.go:845] [D] | GET        | /                                        | 31.0018ms        | match      | /                                        | 
+2015/05/21 17:11:34 [index.go:44] [D] 2 
+2015/05/21 17:11:34 [index.go:50] [D] false 
+2015/05/21 17:11:34 [index.go:51] [D] false 
+2015/05/21 17:11:34 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:11:34 [index.go:131] [D] false 
+2015/05/21 17:11:34 [router.go:845] [D] | GET        | /                                        | 18.001ms         | match      | /                                        | 
+2015/05/21 17:11:57 [index.go:44] [D] 2 
+2015/05/21 17:11:57 [index.go:50] [D] false 
+2015/05/21 17:11:57 [index.go:51] [D] false 
+2015/05/21 17:11:57 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:11:57 [index.go:131] [D] false 
+2015/05/21 17:11:57 [router.go:845] [D] | GET        | /                                        | 18.001ms         | match      | /                                        | 
+2015/05/21 17:14:20 [index.go:44] [D] 2 
+2015/05/21 17:14:20 [index.go:50] [D] false 
+2015/05/21 17:14:20 [index.go:51] [D] false 
+2015/05/21 17:14:20 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:14:20 [index.go:131] [D] false 
+2015/05/21 17:14:20 [router.go:845] [D] | GET        | /                                        | 28.0016ms        | match      | /                                        | 
+2015/05/21 17:17:43 [index.go:44] [D] 2 
+2015/05/21 17:17:43 [index.go:50] [D] false 
+2015/05/21 17:17:43 [index.go:51] [D] false 
+2015/05/21 17:17:43 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:17:43 [index.go:131] [D] false 
+2015/05/21 17:17:43 [router.go:845] [D] | GET        | /                                        | 19.0011ms        | match      | /                                        | 
+2015/05/21 17:20:54 [index.go:44] [D] 2 
+2015/05/21 17:20:54 [index.go:50] [D] false 
+2015/05/21 17:20:54 [index.go:51] [D] false 
+2015/05/21 17:20:54 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:20:54 [index.go:131] [D] false 
+2015/05/21 17:20:54 [router.go:845] [D] | GET        | /                                        | 28.0016ms        | match      | /                                        | 
+2015/05/21 17:21:06 [index.go:44] [D] 2 
+2015/05/21 17:21:06 [index.go:50] [D] false 
+2015/05/21 17:21:06 [index.go:51] [D] false 
+2015/05/21 17:21:06 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:21:06 [index.go:131] [D] false 
+2015/05/21 17:21:06 [router.go:845] [D] | GET        | /                                        | 31.0018ms        | match      | /                                        | 
+2015/05/21 17:21:14 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:21:22 [index.go:44] [D] 0 
+2015/05/21 17:21:22 [index.go:50] [D] false 
+2015/05/21 17:21:22 [index.go:51] [D] false 
+2015/05/21 17:21:22 [index.go:108] [D] 坑货的值 : false 
+2015/05/21 17:21:22 [index.go:131] [D] false 
+2015/05/21 17:21:22 [router.go:845] [D] | GET        | /                                        | 50.0029ms        | match      | /                                        | 
+2015/05/21 17:22:38 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:22:41 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:23:05 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:23:08 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:23:23 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:23:24 [index.go:44] [D] 0 
+2015/05/21 17:23:24 [index.go:50] [D] false 
+2015/05/21 17:23:24 [index.go:51] [D] false 
+2015/05/21 17:23:24 [index.go:131] [D] 验证通过不过?====== false 
+2015/05/21 17:23:25 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:23:25 [index.go:44] [D] 0 
+2015/05/21 17:23:25 [index.go:50] [D] false 
+2015/05/21 17:23:25 [index.go:51] [D] false 
+2015/05/21 17:23:25 [index.go:131] [D] 验证通过不过?====== false 
+2015/05/21 17:23:25 [router.go:845] [D] | GET        | /                                        | 22.0012ms        | match      | /                                        | 
+2015/05/21 17:24:09 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:24:12 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:24:17 [index.go:44] [D] 0 
+2015/05/21 17:24:17 [index.go:50] [D] false 
+2015/05/21 17:24:17 [index.go:51] [D] false 
+2015/05/21 17:24:17 [app_func.go:159] [D] =========md5========= f9e2b0ef7b4ff6bdaf3580887d42f010 
+2015/05/21 17:24:17 [index.go:131] [D] 验证通过不过?====== false 
+2015/05/21 17:24:17 [app_func.go:159] [D] =========md5========= f9e2b0ef7b4ff6bdaf3580887d42f010 
+2015/05/21 17:24:17 [router.go:845] [D] | GET        | /                                        | 22.0013ms        | match      | /                                        | 
+2015/05/21 17:24:54 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:24:56 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:25:03 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:25:07 [index.go:44] [D] 0 
+2015/05/21 17:25:07 [index.go:50] [D] false 
+2015/05/21 17:25:07 [index.go:51] [D] false 
+2015/05/21 17:25:07 [app_func.go:159] [D] =========md5========= f9e2b0ef7b4ff6bdaf3580887d42f010 
+2015/05/21 17:25:07 [app_func.go:160] [D] =========md2========= 346327db51c40b9ef7b8242e7dad396a 
+2015/05/21 17:25:07 [index.go:131] [D] 验证通过不过?====== false 
+2015/05/21 17:25:07 [app_func.go:159] [D] =========md5========= f9e2b0ef7b4ff6bdaf3580887d42f010 
+2015/05/21 17:25:07 [app_func.go:160] [D] =========md2========= 346327db51c40b9ef7b8242e7dad396a 
+2015/05/21 17:25:07 [router.go:845] [D] | GET        | /                                        | 28.0016ms        | match      | /                                        | 
+2015/05/21 17:26:19 [index.go:44] [D] 2 
+2015/05/21 17:26:19 [index.go:50] [D] false 
+2015/05/21 17:26:19 [index.go:51] [D] false 
+2015/05/21 17:26:19 [app_func.go:159] [D] =========md5========= 346327db51c40b9ef7b8242e7dad396a 
+2015/05/21 17:26:19 [app_func.go:160] [D] =========md2========= 346327db51c40b9ef7b8242e7dad396a 
+2015/05/21 17:26:19 [index.go:131] [D] 验证通过不过?====== true 
+2015/05/21 17:26:19 [app_func.go:159] [D] =========md5========= 346327db51c40b9ef7b8242e7dad396a 
+2015/05/21 17:26:19 [app_func.go:160] [D] =========md2========= 346327db51c40b9ef7b8242e7dad396a 
+2015/05/21 17:26:19 [router.go:845] [D] | GET        | /                                        | 25.0014ms        | match      | /                                        | 
+2015/05/21 17:26:57 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:27:06 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:27:08 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:34:55 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:34:58 [parser.go:60] [I] D:\golang\src\appcenter\controllers has not changed, not reloading 
+2015/05/21 17:34:58 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:35:00 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:35:08 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:35:11 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:39:37 [router.go:845] [D] | GET        | /docs                                    | 2.0001ms         | match      | /docs                                    | 
+2015/05/21 17:39:37 [router.go:845] [D] | GET        | /docs                                    | 0                | match      | /docs                                    | 
+2015/05/21 17:39:37 [router.go:845] [D] | GET        | /docs/user                               | 0                | match      | /docs/*                                  | 
+2015/05/21 17:39:37 [router.go:845] [D] | GET        | /docs/user                               | 1.0001ms         | match      | /docs/*                                  | 
+2015/05/21 17:40:03 [main.go:25] [D]  
+2015/05/21 17:40:03 [router.go:845] [D] | OPTIONS    | /v1/user/app_list                        | 2.0002ms         | notmatch   | 
+2015/05/21 17:40:07 [main.go:25] [D]  
+2015/05/21 17:40:07 [router.go:845] [D] | POST       | /v1/user/app_list                        | 1.0001ms         | match      | /v1/user/app_list                        | 
+2015/05/21 17:40:09 [main.go:25] [D]  
+2015/05/21 17:40:09 [router.go:845] [D] | POST       | /v1/user/app_list                        | 0                | match      | /v1/user/app_list                        | 
+2015/05/21 17:40:10 [main.go:25] [D]  
+2015/05/21 17:40:10 [router.go:845] [D] | POST       | /v1/user/app_list                        | 0                | match      | /v1/user/app_list                        | 
+2015/05/21 17:40:11 [main.go:25] [D]  
+2015/05/21 17:40:11 [router.go:845] [D] | OPTIONS    | /v1/user/app_list                        | 2.0001ms         | notmatch   | 
+2015/05/21 17:40:41 [index.go:44] [D] 0 
+2015/05/21 17:40:41 [index.go:50] [D] false 
+2015/05/21 17:40:41 [index.go:51] [D] false 
+2015/05/21 17:40:41 [index.go:131] [D] true 
+2015/05/21 17:40:41 [router.go:845] [D] | GET        | /                                        | 32.0019ms        | match      | /                                        | 
+2015/05/21 17:43:23 [index.go:44] [D] 2 
+2015/05/21 17:43:23 [index.go:50] [D] false 
+2015/05/21 17:43:23 [index.go:51] [D] false 
+2015/05/21 17:43:23 [index.go:131] [D] false 
+2015/05/21 17:43:24 [router.go:845] [D] | GET        | /                                        | 29.0016ms        | match      | /                                        | 
+2015/05/21 17:48:57 [index.go:44] [D] 2 
+2015/05/21 17:48:57 [index.go:50] [D] false 
+2015/05/21 17:48:57 [index.go:51] [D] false 
+2015/05/21 17:48:57 [index.go:131] [D] false 
+2015/05/21 17:48:57 [router.go:845] [D] | GET        | /                                        | 30.0017ms        | match      | /                                        | 
+2015/05/21 17:49:14 [index.go:44] [D] 2 
+2015/05/21 17:49:14 [index.go:50] [D] false 
+2015/05/21 17:49:14 [index.go:51] [D] false 
+2015/05/21 17:49:14 [index.go:131] [D] false 
+2015/05/21 17:49:14 [router.go:845] [D] | GET        | /                                        | 27.0015ms        | match      | /                                        | 
+2015/05/21 17:50:23 [index.go:44] [D] 2 
+2015/05/21 17:50:23 [index.go:50] [D] false 
+2015/05/21 17:50:23 [index.go:51] [D] false 
+2015/05/21 17:50:23 [index.go:167] [D] false 
+2015/05/21 17:50:23 [router.go:845] [D] | GET        | /show/895                                | 11.0006ms        | match      | /show/:id                                | 
+2015/05/21 17:51:16 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:51:18 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:55:01 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:55:04 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:56:07 [app.go:103] [I] http server Running on :8080
+2015/05/21 17:56:10 [app.go:103] [I] http server Running on :8080

@@ -27,6 +27,12 @@ func (u *UserAppController) AppList() {
 	user_app := models.UserAppSearchForm{}
 	json.Unmarshal(u.Ctx.Input.RequestBody, &user_app)
 
+	if user_app.UserId == "" {
+		u.Data["json"] = app_error.ErrInputData
+		u.ServeJson()
+		return
+	}
+
 	beego.Debug("ParseUserAppSearchForm:", &user_app)
 	valid := validation.Validation{}
 	ok, err := valid.Valid(&user_app)

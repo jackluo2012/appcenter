@@ -105,7 +105,7 @@ func (c *IndexController) setLang() bool {
 	c.Data["Langs"] = Langs
 
 	c.Lang = lang
-	beego.Debug("坑货的值 :", isNeedRedir)
+	//	beego.Debug("坑货的值 :", isNeedRedir)
 	return isNeedRedir
 	//*/
 }

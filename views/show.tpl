@@ -14,7 +14,7 @@
 	<script type="text/javascript" src="/static/js/appMDetail.js"></script>
 	<link href="/static/css/owl.carousel.css" rel="stylesheet">
 	<link href="/static/css/owl.theme.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/Mstyle.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/Mstyle.css">
 	<style type="text/css">
 	</style>
 </head>
@@ -98,7 +98,12 @@
 </div>
 </div>
 </div>
-
+ <!-- 遮罩-kitty-2014-10-20 -->
+  <div class="appMCenter_pop" style="display:none;">
+   </div>
+   <section  class="appMCenter_popCont" style="display:none;">
+      <div class="appMCenter_popConttitile">{{i18n $.Lang "loginaccess"}}</div>
+   </section>
 <script type="text/javascript" src="/static/js/owl.carousel.js"></script>
 <script src="/static/js/application.js"></script>
 <script>
@@ -111,28 +116,9 @@
       });
 
     });
-
-
-    </script>
-    <script type="text/javascript">
-/*
-    //下载前登录验证
-    $(".download_Button").click(function(e){
-        var isLogin = location.search;
-            reg = /(?!isLogin=)true/g;
-
-        if(!e.preventDefault()){
-            e.returnValue = false;
-        }
-        if(isLogin.match(reg)){
-            location.href = $(this).attr("href");
-        }else{
-               $(".appMCenter_pop").show();
-                $(".appMCenter_popCont").show();
-
-            // alert("请先登录亦来云账号");
-        }
-    });
+</script>
+<script type="text/javascript">
+//*
 
 //弹出层
 $(function(){
@@ -140,11 +126,30 @@ $(function(){
   $(".appMCenter_popContBt button").click(function() {                
                      $(".appMCenter_pop").hide();
                      $(".appMCenter_popCont").hide();
-            })
+  });
+ //下载前登录验证
+    $(".download_Button").click(function(e){
+        //*
+        var isLogin = location.search,
+            reg = /secretkey=(*){32}/g;
+
+        if(!e.preventDefault()){
+            e.returnValue = false;
+        }
+        //*
+        if(isLogin.match(reg)){
+            location.href = $(this).attr("href");
+        }else{
+               $(".appMCenter_pop").show();
+                $(".appMCenter_popCont").show();
+
+        }
+    });
 
 
 })
-*/
+
+//*/
 
     </script>
 </body>

@@ -22,7 +22,12 @@ func main() {
 	//
 	beego.InsertFilter("/v1/user/*", beego.BeforeRouter, func(ctx *context.Context) {
 		//ctx.Output.Header("Access-Control-Allow-Origin", "*")
-		beego.Debug("")
+		if ctx.Input.Header("app_key") == "appcenter" && ctx.Input.Header("app_secret") == "123456789" {
+			beego.Debug("验证结果========= OK !!!")
+		} else {
+			beego.Debug("验证结果=========Error !!!")
+		}
+
 	})
 
 	beego.Run()
